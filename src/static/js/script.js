@@ -1,6 +1,6 @@
 //=== Save fav sessions
 (function() {
-    const namespace = 'jsconfeu-2018-schedule';
+    const namespace = 'jsconfeu-2019-schedule';
     const inputs = [...document.querySelectorAll('input[type=radio]')];
 
     /**
@@ -95,7 +95,7 @@
      * @returns {HTMLElement}
      */
     const getCurrentSlot = date => {
-        const confYear = 2018;
+        const confYear = 2019;
         const confMonth = 5;
         const confDay1 = 2;
         const confDay2 = 3;
@@ -154,7 +154,7 @@
      * Scroll to slot
      */
     const scrollToSlot = () => {
-        // const date = '2018-06-03 13:56 GMT+0200';
+        // const date = '2019-06-03 13:56 GMT+0200';
         const date = new Date();
         // header height including border and padding
         const header = document.querySelector('header');
@@ -320,7 +320,7 @@
 //=== (╯°□°)╯︵ ┻━┻
 (function() {
     console.log(
-        '🦄 GitHub repo: https://github.com/electricg/jsconfeu-2018-schedule'
+        '🦄 GitHub repo: https://github.com/electricg/jsconfeu-2019-schedule'
     );
     console.log('😴 Made by https://twitter.com/electric_g');
 })();

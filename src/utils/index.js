@@ -45,7 +45,7 @@ const parseData = html => {
             link.attr('target', '_blank').attr('rel', 'noopener');
 
             if (href.indexOf('http') !== 0) {
-                link.attr('href', `https://2018.jsconf.eu${href}`);
+                link.attr('href', `https://2019.jsconf.eu${href}`);
             }
         });
         const description = $description.html();

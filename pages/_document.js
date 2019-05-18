@@ -28,7 +28,7 @@ class MyDocument extends Document {
 
                     <link
                         rel="all-the-source"
-                        href="https://github.com/electricg/jsconfeu-2018-schedule"
+                        href="https://github.com/electricg/jsconfeu-2019-schedule"
                     />
 
                     <link
@@ -44,7 +44,7 @@ class MyDocument extends Document {
                         type="image/png"
                     />
 
-                    <title>JSConf EU 2018 Schedule</title>
+                    <title>JSConf EU 2019 Schedule</title>
 
                     <script
                         dangerouslySetInnerHTML={{
