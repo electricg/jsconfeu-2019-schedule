@@ -30,7 +30,7 @@ app
         });
 
         server.get('/schedule.json', async (req, res) => {
-            const html = await axios.get('https://2019.jsconf.eu/schedule/');
+            const html = await axios.get('https://2019.jsconf.eu/schedule/timetable.html');
             const schedule = parseData(html.data);
 
             res.set('Content-Type', 'application/json');

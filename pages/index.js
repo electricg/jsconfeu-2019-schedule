@@ -7,7 +7,7 @@ import Schedule from '../src/components/schedule';
 
 const url =
     process.env.NODE_ENV === 'production'
-        ? 'https://2019.jsconf.eu/schedule/'
+        ? 'https://2019.jsconf.eu/schedule/timetable.html'
         : 'http://localhost:3000/schedule/';
 
 class PageIndex extends Component {

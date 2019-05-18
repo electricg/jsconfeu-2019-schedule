@@ -97,8 +97,8 @@
     const getCurrentSlot = date => {
         const confYear = 2019;
         const confMonth = 5;
-        const confDay1 = 2;
-        const confDay2 = 3;
+        const confDay1 = 1;
+        const confDay2 = 2;
 
         const today = typeof date === 'string' ? new Date(date) : date;
         const todayYear = today.getFullYear();

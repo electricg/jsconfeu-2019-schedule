@@ -18,12 +18,16 @@ const parseData = html => {
         const who = $el
             .find('.speaker')
             .text()
+            .replace('☆', '')
+            .replace('★', '')
             .trim();
 
         const what = $el
             .find('h3')
             .text()
             .replace(who, '')
+            .replace('☆', '')
+            .replace('★', '')
             .trim();
 
         const trackName = $el
