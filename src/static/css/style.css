@@ -79,6 +79,19 @@ a {
     position: fixed;
 }
 
+.conf-title,
+.conf-date {
+    font-size: 0.8em;
+    left: 4px;
+    position: fixed;
+    top: 2em;
+    z-index: 2;
+}
+.conf-date {
+    left: auto;
+    right: 4px;
+}
+
 .slot {
     display: flex;
     flex-wrap: wrap;

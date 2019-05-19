@@ -64,6 +64,9 @@ class MyDocument extends Document {
                     <style dangerouslySetInnerHTML={{ __html: css }} />
                 </Head>
                 <body>
+                    <h1 className="conf-title">JSConf EU 2019</h1>
+                    <h2 className="conf-date">June 1st & 2nd</h2>
+
                     <span className="version">
                         v{version}
                         <span className="airplane" id="airplane" />
