@@ -8,11 +8,7 @@ export default class MyMain extends Main {
 
         return (
             <Fragment>
-                <div
-                    id="__next"
-                    className="__next-wrapper"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                />
+                <div dangerouslySetInnerHTML={{ __html: html }} />
             </Fragment>
         );
     }

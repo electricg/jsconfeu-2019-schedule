@@ -14,7 +14,7 @@ const Slot = ({ day, time, data }) => {
             className="slot"
         >
             {trackIds.map(trackId => (
-                <Fragment>
+                <Fragment key={trackId}>
                     <FavInput
                         id={data[trackId].id}
                         day={day}
