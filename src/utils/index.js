@@ -4,7 +4,14 @@ const fs = require('fs');
 
 const _package = require('../../package.json');
 const { version, config } = _package;
-const { nameLong, nameShort, inputUrlBase, nowName } = config;
+const {
+    nameLong,
+    nameShort,
+    inputUrl,
+    inputUrlBase,
+    nowName,
+    outputFolder
+} = config;
 
 const parseData = html => {
     const data = {};
@@ -93,6 +100,22 @@ const downloadSchedule = async url => {
     return html.data;
 };
 
+const saveScheduleHtml = async () => {
+    const html = await downloadSchedule(inputUrl);
+    fs.writeFileSync(`${__dirname}/../../src/data/schedule.html`, html);
+    console.log('wrote schedule.html');
+};
+
+const saveScheduleJson = () => {
+    const html = fs.readFileSync(`${__dirname}/../../src/data/schedule.html`);
+    const json = parseData(html);
+    fs.writeFileSync(
+        `${__dirname}/../../src/data/schedule.json`,
+        JSON.stringify(json, null, 4)
+    );
+    console.log('wrote schedule.json');
+};
+
 const createFileSWJS = () => {
     const content = fs.readFileSync(
         `${__dirname}/../../src/static/js/sw.js`,
@@ -100,6 +123,12 @@ const createFileSWJS = () => {
     );
     const js = content.replace('@VERSION@', version);
     return js;
+};
+
+const writeFileSWJS = () => {
+    const js = createFileSWJS();
+    fs.writeFileSync(`${__dirname}/../../${outputFolder}/sw.js`, js);
+    console.log('wrote sw.js');
 };
 
 const createFileManifestJson = () => {
@@ -113,6 +142,12 @@ const createFileManifestJson = () => {
     return js;
 };
 
+const writeFileManifestJson = () => {
+    const js = createFileManifestJson();
+    fs.writeFileSync(`${__dirname}/../../${outputFolder}/manifest.json`, js);
+    console.log('wrote manifest.json');
+};
+
 const createFileNowJson = () => {
     const content = fs.readFileSync(
         `${__dirname}/../../src/static/js/now.json`,
@@ -122,10 +157,43 @@ const createFileNowJson = () => {
     return js;
 };
 
+const writeFileNowJson = () => {
+    const js = createFileNowJson();
+    fs.writeFileSync(`${__dirname}/../../${outputFolder}/now.json`, js);
+    console.log('wrote now.json');
+};
+
+// https://stackoverflow.com/a/32197381
+const deleteFolderRecursive = path => {
+    if (fs.existsSync(path)) {
+        fs.readdirSync(path).forEach(file => {
+            var curPath = `${path}/${file}`;
+            if (fs.lstatSync(curPath).isDirectory()) {
+                // recurse
+                deleteFolderRecursive(curPath);
+            } else {
+                // delete file
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+};
+
+const deleteFolder = path => {
+    deleteFolderRecursive(path);
+    console.log(`deleted ${path}`);
+    return;
+};
+
 module.exports = {
-    parseData,
-    downloadSchedule,
+    saveScheduleHtml,
+    saveScheduleJson,
     createFileSWJS,
+    writeFileSWJS,
     createFileManifestJson,
-    createFileNowJson
+    writeFileManifestJson,
+    createFileNowJson,
+    writeFileNowJson,
+    deleteFolder
 };

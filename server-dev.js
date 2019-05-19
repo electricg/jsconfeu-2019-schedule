@@ -1,16 +1,7 @@
 const express = require('express');
 const next = require('next');
 
-const {
-    parseData,
-    downloadSchedule,
-    createFileSWJS,
-    createFileManifestJson
-} = require('./src/utils');
-
-const _package = require('./package.json');
-const { config } = _package;
-const { inputUrl } = config;
+const { createFileSWJS, createFileManifestJson } = require('./src/utils');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -34,11 +25,8 @@ app.prepare()
         });
 
         server.get('/schedule.json', async (req, res) => {
-            const html = await downloadSchedule(inputUrl);
-            const schedule = parseData(html);
-
             res.set('Content-Type', 'application/json');
-            res.send(schedule);
+            res.sendFile(`${__dirname}/src/data/schedule.json`);
         });
 
         server.get('/schedule', (req, res) => {

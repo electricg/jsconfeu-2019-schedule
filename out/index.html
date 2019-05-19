@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Giulia Alfonsi - @electric_g" />
     <meta name="robots" content="noindex,nofollow" />
-    <link rel="manifest" href="/static/manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="all-the-source" href="https://github.com/electricg/jsconfeu-2019-schedule" />
     <link href="/static/images/icons/icon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/static/images/icons/icon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-    <title>JSConf EU 2019 Schedule</title>
+    <title>JSConf EU 2019 schedule</title>
     <script>document.documentElement.className = '🦄';</script>
     <style>:root {
     --callbackpink: #e10079;
@@ -255,39 +255,11 @@ header a.active {
     margin: 0;
     padding-left: 1em;
 }
-
-/* test */
-
-/* section#day-2019-06-03 {
-    position: relative;
-}
-
-section#day-2019-06-02:after {
-    background: var(--evalblack);
-    content: "";
-    display: block;
-    height: 42px;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-}
-
-.version,
-.now {
-    z-index: 3;
-}
-
-header a {
-    color: var(--evalblack);
-}
-header a.active {
-    color: var(--promiselinen);
-} */
 </style>
 </head>
 
-<body><span class="version">v1.0.1<span class="airplane" id="airplane"></span></span>
-    <div id="__next" class="__next-wrapper">
+<body><span class="version">v1.1.0<span class="airplane" id="airplane"></span></span>
+    <div>
         <main><input type="button" value="now" id="now" class="now" />
             <section id="day-2019-06-01" class="day">
                 <header>
@@ -921,9 +893,17 @@ header a.active {
             </svg></button>
         <p id="service-worker-message" class="service-worker__message"></p>
     </div>
+    <script>
+window['🦄'] = {
+    repo: 'https://github.com/electricg/jsconfeu-2019-schedule',
+    namespace: 'jsconfeu19',
+    days: [`2019-05-18`,`2019-06-02`],
+    offlineMode: true,
+};
+</script>
     <script>//=== Save fav sessions
 (function() {
-    const namespace = 'jsconfeu-2019-schedule';
+    const namespace = window['🦄'].namespace;
     const inputs = [...document.querySelectorAll('input[type=radio]')];
 
     /**
@@ -1077,7 +1057,6 @@ header a.active {
      * Scroll to slot
      */
     const scrollToSlot = () => {
-        // const date = '2019-06-03 13:56 GMT+0200';
         const date = new Date();
         // header height including border and padding
         const header = document.querySelector('header');
@@ -1214,7 +1193,7 @@ header a.active {
                 });
         });
 
-        if (0) {
+        if (window['🦄'].offlineMode) {
             isSWInstalled = swCheckStatus();
 
             if (isSWInstalled) {
@@ -1242,9 +1221,7 @@ header a.active {
 
 //=== (╯°□°)╯︵ ┻━┻
 (function() {
-    console.log(
-        '🦄 GitHub repo: https://github.com/electricg/jsconfeu-2019-schedule'
-    );
+    console.log(`🦄 GitHub repo: ${window['🦄'].repo}`);
     console.log('😴 Made by https://twitter.com/electric_g');
 })();
 </script>
