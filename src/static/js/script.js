@@ -290,7 +290,7 @@
                 });
         });
 
-        if (0) {
+        if (window['🦄'].offlineMode) {
             isSWInstalled = swCheckStatus();
 
             if (isSWInstalled) {

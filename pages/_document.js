@@ -8,7 +8,7 @@ import css from 'raw-loader!../src/static/css/style.css';
 // Enforce that only the loader in the import statement is used by prefixing it with a !
 import js from '!raw-loader!../src/static/js/script.js';
 
-const { nameLong, nameShort, days } = config;
+const { nameLong, nameShort, days, offlineMode } = config;
 const daysFormatted = days.map(day => `\`${day}\``).join(',');
 
 const prejs = `
@@ -16,6 +16,7 @@ window['🦄'] = {
     repo: '${homepage}',
     namespace: '${nameShort}',
     days: [${daysFormatted}],
+    offlineMode: ${offlineMode},
 };
 `;
 
