@@ -9,11 +9,11 @@ const Session = ({ data, multiple }) => {
             <section id={id} className={`session ${trackId}`}>
                 <FavLabel id={id} show={multiple}>
                     <span className="track">{trackName}</span>
-                    <span className="what" role="heading" aria-level="3">
-                        {what}
-                    </span>
-                    {who !== 'all' && <span className="speaker">{who}</span>}
                 </FavLabel>
+                <span className="what" role="heading" aria-level="3">
+                    {what}
+                </span>
+                {who !== 'all' && <span className="speaker">{who}</span>}
                 {!!description && (
                     <details
                         className="description"
