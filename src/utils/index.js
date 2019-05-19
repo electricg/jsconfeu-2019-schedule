@@ -1,4 +1,9 @@
+const axios = require('axios');
 const cheerio = require('cheerio');
+const fs = require('fs');
+
+const _package = require('../../package.json');
+const { version } = _package;
 
 const parseData = html => {
     const data = {};
@@ -82,4 +87,18 @@ const parseData = html => {
     return data;
 };
 
-module.exports = { parseData };
+const downloadSchedule = async url => {
+    const html = await axios.get(url);
+    return html.data;
+};
+
+const createFileSWJS = () => {
+    const content = fs.readFileSync(
+        `${__dirname}/../../src/static/js/sw.js`,
+        'utf8'
+    );
+    const js = content.replace('@VERSION@', version);
+    return js;
+};
+
+module.exports = { parseData, downloadSchedule, createFileSWJS };

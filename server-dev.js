@@ -1,12 +1,10 @@
-const axios = require('axios');
 const express = require('express');
-const fs = require('fs');
 const next = require('next');
 
-const { parseData } = require('./src/utils');
+const { parseData, downloadSchedule, createFileSWJS } = require('./src/utils');
 
 const _package = require('./package.json');
-const { version, config } = _package;
+const { config } = _package;
 const { inputUrl } = config;
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -19,19 +17,14 @@ app.prepare()
 
         // custom handlers go here…
         server.get('/sw.js', (req, res) => {
-            // res.sendFile(`${__dirname}/src/static/js/sw.js`);
-            const content = fs.readFileSync(
-                `${__dirname}/src/static/js/sw.js`,
-                'utf8'
-            );
-            const js = content.replace('@VERSION@', version);
+            const js = createFileSWJS();
             res.set('Content-Type', 'application/javascript');
             res.send(js);
         });
 
         server.get('/schedule.json', async (req, res) => {
-            const html = await axios.get(inputUrl);
-            const schedule = parseData(html.data);
+            const html = await downloadSchedule(inputUrl);
+            const schedule = parseData(html);
 
             res.set('Content-Type', 'application/json');
             res.send(schedule);
