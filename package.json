@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "config": {
-    "outputFolder": "jsconfeu-2019-schedule"
+    "outputFolder": "out",
     "inputUrl": "https://2019.jsconf.eu/schedule/timetable.html",
     "nowName": "jsconfeu-2019-schedule",
     "nowAlias": "2019-jsconfeu-schedule",
