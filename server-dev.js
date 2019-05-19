@@ -1,7 +1,12 @@
 const express = require('express');
 const next = require('next');
 
-const { parseData, downloadSchedule, createFileSWJS } = require('./src/utils');
+const {
+    parseData,
+    downloadSchedule,
+    createFileSWJS,
+    createFileManifestJson
+} = require('./src/utils');
 
 const _package = require('./package.json');
 const { config } = _package;
@@ -17,9 +22,15 @@ app.prepare()
 
         // custom handlers go here…
         server.get('/sw.js', (req, res) => {
-            const js = createFileSWJS();
+            const content = createFileSWJS();
             res.set('Content-Type', 'application/javascript');
-            res.send(js);
+            res.send(content);
+        });
+
+        server.get('/manifest.json', (req, res) => {
+            const content = createFileManifestJson();
+            res.set('Content-Type', 'application/json');
+            res.send(content);
         });
 
         server.get('/schedule.json', async (req, res) => {

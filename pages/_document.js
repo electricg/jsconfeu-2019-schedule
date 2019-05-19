@@ -36,7 +36,7 @@ class MyDocument extends Document {
                     />
                     <meta name="robots" content="noindex,nofollow" />
 
-                    <link rel="manifest" href="/static/manifest.json" />
+                    <link rel="manifest" href="/manifest.json" />
 
                     <link rel="all-the-source" href={homepage} />
 

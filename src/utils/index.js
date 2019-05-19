@@ -3,7 +3,8 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 const _package = require('../../package.json');
-const { version } = _package;
+const { version, config } = _package;
+const { nameLong, nameShort, inputUrlBase, nowName } = config;
 
 const parseData = html => {
     const data = {};
@@ -54,7 +55,7 @@ const parseData = html => {
             link.attr('target', '_blank').attr('rel', 'noopener');
 
             if (href.indexOf('http') !== 0) {
-                link.attr('href', `https://2019.jsconf.eu${href}`);
+                link.attr('href', `${inputUrlBase}${href}`);
             }
         });
         const description = $description.html();
@@ -101,4 +102,30 @@ const createFileSWJS = () => {
     return js;
 };
 
-module.exports = { parseData, downloadSchedule, createFileSWJS };
+const createFileManifestJson = () => {
+    const content = fs.readFileSync(
+        `${__dirname}/../../src/static/js/manifest.json`,
+        'utf8'
+    );
+    const js = content
+        .replace('@NAMELONG@', nameLong)
+        .replace('@NAMESHORT@', nameShort);
+    return js;
+};
+
+const createFileNowJson = () => {
+    const content = fs.readFileSync(
+        `${__dirname}/../../src/static/js/now.json`,
+        'utf8'
+    );
+    const js = content.replace('@NOWNAME@', nowName);
+    return js;
+};
+
+module.exports = {
+    parseData,
+    downloadSchedule,
+    createFileSWJS,
+    createFileManifestJson,
+    createFileNowJson
+};
