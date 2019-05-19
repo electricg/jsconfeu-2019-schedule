@@ -95,6 +95,19 @@ a {
     position: fixed;
 }
 
+.conf-title,
+.conf-date {
+    font-size: 0.8em;
+    left: 4px;
+    position: fixed;
+    top: 2em;
+    z-index: 2;
+}
+.conf-date {
+    left: auto;
+    right: 4px;
+}
+
 .slot {
     display: flex;
     flex-wrap: wrap;
@@ -168,9 +181,10 @@ a {
     display: block;
 }
 .fav__label .track:after {
-    content: "♠️";
+    content: "☆";
     display: none;
     font-family: initial;
+    font-size: 1.2em;
     padding: 0 2px 0 4px;
 }
 .🦄 .fav__label .track:after {
@@ -185,7 +199,8 @@ a {
     ~ .session:nth-of-type(2)
     .fav__label
     .track:after {
-    content: "❤️";
+    color: var(--callbackpink);
+    content: "★";
 }
 
 .fav__input:nth-of-type(1):checked ~ .session:nth-of-type(2),
@@ -258,7 +273,9 @@ header a.active {
 </style>
 </head>
 
-<body><span class="version">v1.1.0<span class="airplane" id="airplane"></span></span>
+<body>
+    <h1 class="conf-title">JSConf EU 2019</h1>
+    <h2 class="conf-date">June 1st &amp; 2nd</h2><span class="version">v1.1.1<span class="airplane" id="airplane"></span></span>
     <div>
         <main><input type="button" value="now" id="now" class="now" />
             <section id="day-2019-06-01" class="day">
@@ -311,14 +328,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-11:30" dateTime="2019-06-01 11:30 GMT+0200" class="slot"><input type="radio" id="fav-talk-jason-williams-let-s-build-a-javascript-engine" name="fav-2019-06-01-11:30" class="fav__input" /><input type="radio" id="fav-talk-martin-sonnenholzer-animations---learning-from-cartoons" name="fav-2019-06-01-11:30" class="fav__input" />
                     <h2 class="slot__title">11:30</h2>
-                    <section id="talk-jason-williams-let-s-build-a-javascript-engine" class="session backtrack"><label for="fav-talk-jason-williams-let-s-build-a-javascript-engine" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Let’s build a JavaScript Engine</span><span class="speaker">Jason Williams</span></label>
+                    <section id="talk-jason-williams-let-s-build-a-javascript-engine" class="session backtrack"><label for="fav-talk-jason-williams-let-s-build-a-javascript-engine" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Let’s build a JavaScript Engine</span><span class="speaker">Jason Williams</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Have you wondered how JS engines work? This past year I built an engine from scratch in Rust. It was fun, weird, exciting and sometimes exhausting. I will share my experience as well as what it is like to work on the specification, collaborate with TC39, and lessons from engines in use today.</p>
                             <p><a href="https://2019.jsconf.eu/jason-williams/lets-build-a-javascript-engine.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-martin-sonnenholzer-animations---learning-from-cartoons" class="session sidetrack"><label for="fav-talk-martin-sonnenholzer-animations---learning-from-cartoons" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">animations - learning from cartoons</span><span class="speaker">Martin Sonnenholzer</span></label>
+                    <section id="talk-martin-sonnenholzer-animations---learning-from-cartoons" class="session sidetrack"><label for="fav-talk-martin-sonnenholzer-animations---learning-from-cartoons" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">animations - learning from cartoons</span><span class="speaker">Martin Sonnenholzer</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>With CSS animations and web animations moving elements became possible in the browser. But how one moves an object in such a way that it appears &#x201C;correct&#x201D; for the human eye? How does a motion feel natural? These and similar questions confronted the artists who brought cartoons to life as early as 1906. Let&#x2019;s take a look behind the scenes and see how drawings learned to walk and what we can learn from it for animations in the browser.</p>
@@ -328,14 +345,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-12:00" dateTime="2019-06-01 12:00 GMT+0200" class="slot"><input type="radio" id="fav-talk-tara-z--manicsic-es2019-features--what-even-are-they-" name="fav-2019-06-01-12:00" class="fav__input" /><input type="radio" id="fav-talk-paulo-lopes-10-things-i-learned-while-writing-the-fastest-javascript-server-runtime-in-the-world" name="fav-2019-06-01-12:00" class="fav__input" />
                     <h2 class="slot__title">12:00</h2>
-                    <section id="talk-tara-z--manicsic-es2019-features--what-even-are-they-" class="session backtrack"><label for="fav-talk-tara-z--manicsic-es2019-features--what-even-are-they-" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">ES2019 Features: What Even Are They?</span><span class="speaker">Tara Z. Manicsic</span></label>
+                    <section id="talk-tara-z--manicsic-es2019-features--what-even-are-they-" class="session backtrack"><label for="fav-talk-tara-z--manicsic-es2019-features--what-even-are-they-" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">ES2019 Features: What Even Are They?</span><span class="speaker">Tara Z. Manicsic</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Thankfully, every year ECMAScript gives us new shinies to advance how we code JavaScript. I&#x2019;ve found myself digging into features &amp; proposals ever since my curiosity of ES2017&#x2019;s <code>SharedArrayBuffer</code> took me down a fascinating rabbit hole. Let&#x2019;s delve into some of the features &amp; proposals we get to look forward to in 2019.</p>
                             <p><a href="https://2019.jsconf.eu/tara-z-manicsic/es2019-features-what-even-are-they.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-paulo-lopes-10-things-i-learned-while-writing-the-fastest-javascript-server-runtime-in-the-world" class="session sidetrack"><label for="fav-talk-paulo-lopes-10-things-i-learned-while-writing-the-fastest-javascript-server-runtime-in-the-world" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">10 things I learned making the fastest js server runtime in the world</span><span class="speaker">Paulo Lopes</span></label>
+                    <section id="talk-paulo-lopes-10-things-i-learned-while-writing-the-fastest-javascript-server-runtime-in-the-world" class="session sidetrack"><label for="fav-talk-paulo-lopes-10-things-i-learned-while-writing-the-fastest-javascript-server-runtime-in-the-world" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">10 things I learned making the fastest js server runtime in the world</span><span class="speaker">Paulo Lopes</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>This presentation is about server performance, which means that no time in the world would be enough to cover it all. Hopefully, I can share with you the top</p>
@@ -348,14 +365,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-12:30" dateTime="2019-06-01 12:30 GMT+0200" class="slot"><input type="radio" id="fav-talk-garann-means-what-happened-to-my-javascript-phone-" name="fav-2019-06-01-12:30" class="fav__input" /><input type="radio" id="fav-talk-constanza-y--ez-calder-n-about-life--robots-and-cats-" name="fav-2019-06-01-12:30" class="fav__input" />
                     <h2 class="slot__title">12:30</h2>
-                    <section id="talk-garann-means-what-happened-to-my-javascript-phone-" class="session backtrack"><label for="fav-talk-garann-means-what-happened-to-my-javascript-phone-" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">What happened to my JavaScript phone?</span><span class="speaker">Garann Means</span></label>
+                    <section id="talk-garann-means-what-happened-to-my-javascript-phone-" class="session backtrack"><label for="fav-talk-garann-means-what-happened-to-my-javascript-phone-" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">What happened to my JavaScript phone?</span><span class="speaker">Garann Means</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Not long ago, it seemed like JavaScript devices were going to free JS developers from the constraints of the browser and let us control every aspect of our lives as easily as we once controlled hover menus. Though nodebots were captivating, many of us were anxious for the JS device revolution to reach a more mundane destination: our phones. And yet today the constraints of the mobile landscape look not much different from several years ago. We have the same two operating systems, the same two app stores, and same option to write a native app or push people to save what is still mostly a bookmark. How did we cover so little distance, given the enthusiasm, resources, and potential that appeared to exist, and more importantly, how close can we come to a JavaScript phone today?</p>
                             <p><a href="https://2019.jsconf.eu/garann-means/what-happened-to-my-javascript-phone.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-constanza-y--ez-calder-n-about-life--robots-and-cats-" class="session sidetrack"><label for="fav-talk-constanza-y--ez-calder-n-about-life--robots-and-cats-" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">About life, robots and cats!</span><span class="speaker">Constanza Yáñez Calderón</span></label>
+                    <section id="talk-constanza-y--ez-calder-n-about-life--robots-and-cats-" class="session sidetrack"><label for="fav-talk-constanza-y--ez-calder-n-about-life--robots-and-cats-" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">About life, robots and cats!</span><span class="speaker">Constanza Yáñez Calderón</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>When I was a child I dreamt a lot about creating robots that helped me in my daily life, like tidying up my bedroom. That was just a dream till I grow up and found out that there&#x2019;s something called home automation. So I decided to build Sasha, my cats&#x2019; pet sitter, that helps me by feeding my cats when I have to get home a little bit late. Sasha changed my life and my cats are stressless, because they can eat their meal at the right time.</p>
@@ -376,13 +393,13 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-14:00" dateTime="2019-06-01 14:00 GMT+0200" class="slot"><input type="radio" id="fav-talk-tc39-committee-panel---ama" name="fav-2019-06-01-14:00" class="fav__input" /><input type="radio" id="fav-talk-sher-minn-chong-recreating-retro-computer-art-with-js-" name="fav-2019-06-01-14:00" class="fav__input" />
                     <h2 class="slot__title">14:00</h2>
-                    <section id="talk-tc39-committee-panel---ama" class="session backtrack"><label for="fav-talk-tc39-committee-panel---ama" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Panel</span><span class="speaker">TC39 Committee</span></label>
+                    <section id="talk-tc39-committee-panel---ama" class="session backtrack"><label for="fav-talk-tc39-committee-panel---ama" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Panel</span><span class="speaker">TC39 Committee</span>
                         <details class="description">
                             <summary>description</summary>
                             <p><a href="https://2019.jsconf.eu/tc39-committee/panel.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-sher-minn-chong-recreating-retro-computer-art-with-js-" class="session sidetrack"><label for="fav-talk-sher-minn-chong-recreating-retro-computer-art-with-js-" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Recreating Retro Computer Art with JS!</span><span class="speaker">Sher Minn Chong</span></label>
+                    <section id="talk-sher-minn-chong-recreating-retro-computer-art-with-js-" class="session sidetrack"><label for="fav-talk-sher-minn-chong-recreating-retro-computer-art-with-js-" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Recreating Retro Computer Art with JS!</span><span class="speaker">Sher Minn Chong</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Before personal computing became a thing, there was a handful of programmers and artists saw computers as a tool beyond their intended purpose: to create art.</p>
@@ -394,14 +411,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-14:30" dateTime="2019-06-01 14:30 GMT+0200" class="slot"><input type="radio" id="fav-talk-roshan-gautam-you-should-start-a-tech-community--too" name="fav-2019-06-01-14:30" class="fav__input" /><input type="radio" id="fav-talk-nat-alison-polyhedra--i-choose-you--letting-your-passions-take-form" name="fav-2019-06-01-14:30" class="fav__input" />
                     <h2 class="slot__title">14:30</h2>
-                    <section id="talk-roshan-gautam-you-should-start-a-tech-community--too" class="session backtrack"><label for="fav-talk-roshan-gautam-you-should-start-a-tech-community--too" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">You should start a tech community too.</span><span class="speaker">Roshan Gautam</span></label>
+                    <section id="talk-roshan-gautam-you-should-start-a-tech-community--too" class="session backtrack"><label for="fav-talk-roshan-gautam-you-should-start-a-tech-community--too" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">You should start a tech community too.</span><span class="speaker">Roshan Gautam</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>I will share my story of establishing and growing JS Community in a developing country Nepal. How tech communities will help you and other grow together ? Challenges that you might face while starting a community in your place. (Based on my experience) How to overcome these challenges ?</p>
                             <p><a href="https://2019.jsconf.eu/roshan-gautam/you-should-start-a-tech-community-too.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-nat-alison-polyhedra--i-choose-you--letting-your-passions-take-form" class="session sidetrack"><label for="fav-talk-nat-alison-polyhedra--i-choose-you--letting-your-passions-take-form" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Polyhedra, I Choose You! Letting Your Passions Take Form</span><span class="speaker">Nat Alison</span></label>
+                    <section id="talk-nat-alison-polyhedra--i-choose-you--letting-your-passions-take-form" class="session sidetrack"><label for="fav-talk-nat-alison-polyhedra--i-choose-you--letting-your-passions-take-form" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Polyhedra, I Choose You! Letting Your Passions Take Form</span><span class="speaker">Nat Alison</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>For millennia, mathematicians and artists have been fascinated by polyhedra, 3D shapes that encode complex symmetries and relationships. My name is [anonymized], and for the last ten years I have dedicated my life to sharing the beauty of these shapes with the world. Join me on an epic quest filled with ancient 3D libraries, arcane mathematical data structures, and Pok&#xE9;mon GIFs as I strive to make my vision a reality the only way I know how: an interactive web app. Come and twist, expand, and gyroelongate polyhedra with me, and let my journey inspire you to use the web to make your own passions come to life.</p>
@@ -411,7 +428,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-15:00" dateTime="2019-06-01 15:00 GMT+0200" class="slot"><input type="radio" id="fav-talk-michael-mifsud-graphql-towards-a-universal-query-language" name="fav-2019-06-01-15:00" class="fav__input" /><input type="radio" id="fav-talk-stefan-judis-http-headers-for-the-responsible-developer" name="fav-2019-06-01-15:00" class="fav__input" />
                     <h2 class="slot__title">15:00</h2>
-                    <section id="talk-michael-mifsud-graphql-towards-a-universal-query-language" class="session backtrack"><label for="fav-talk-michael-mifsud-graphql-towards-a-universal-query-language" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">GraphQL: Towards a universal query language</span><span class="speaker">Michael Mifsud</span></label>
+                    <section id="talk-michael-mifsud-graphql-towards-a-universal-query-language" class="session backtrack"><label for="fav-talk-michael-mifsud-graphql-towards-a-universal-query-language" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">GraphQL: Towards a universal query language</span><span class="speaker">Michael Mifsud</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>From its friendly developer experience to its performance benefits, a lot has been said about GraphQL. Underlying it all is the GraphQL query language, made possible by GraphQL schema language. These surprisingly versatile features have the potential to provide a single interface for all modern web app development concerns.</p>
@@ -419,7 +436,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/michael-mifsud/graphql-towards-a-universal-query-language.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-stefan-judis-http-headers-for-the-responsible-developer" class="session sidetrack"><label for="fav-talk-stefan-judis-http-headers-for-the-responsible-developer" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">HTTP headers for the responsible developer</span><span class="speaker">Stefan Judis</span></label>
+                    <section id="talk-stefan-judis-http-headers-for-the-responsible-developer" class="session sidetrack"><label for="fav-talk-stefan-judis-http-headers-for-the-responsible-developer" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">HTTP headers for the responsible developer</span><span class="speaker">Stefan Judis</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>To build inclusive websites, developers have to consider accessibility, performance and user flows. Crafted source code forms the foundation for thought-through UIs, but it&#x2019;s not only about the code. Let&#x2019;s have a look at HTTP, and to be specific, its headers that can have a direct impact on user experience.</p>
@@ -439,7 +456,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-16:00" dateTime="2019-06-01 16:00 GMT+0200" class="slot"><input type="radio" id="fav-talk-jason-straughan-teaching-kids-to-code-by-a-13-year-old" name="fav-2019-06-01-16:00" class="fav__input" /><input type="radio" id="fav-talk-shwetank-dixit-block--unblock--block----how-ad-blockers-are-being-circumvented--and-how-they-are-fighting-back" name="fav-2019-06-01-16:00" class="fav__input" />
                     <h2 class="slot__title">16:00</h2>
-                    <section id="talk-jason-straughan-teaching-kids-to-code-by-a-13-year-old" class="session backtrack"><label for="fav-talk-jason-straughan-teaching-kids-to-code-by-a-13-year-old" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Teaching Kids to Code by a 13 year-old</span><span class="speaker">Jason Straughan</span></label>
+                    <section id="talk-jason-straughan-teaching-kids-to-code-by-a-13-year-old" class="session backtrack"><label for="fav-talk-jason-straughan-teaching-kids-to-code-by-a-13-year-old" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Teaching Kids to Code by a 13 year-old</span><span class="speaker">Jason Straughan</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Teaching programming to children is hard. Computer Science topics can be difficult to grasp using standard programming languages and tools. Using MIT&#x2019;s Scratch programming platform, creating games and working software is simple and fun thanks to their drag and drop interface.</p>
@@ -447,7 +464,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/jason-straughan/teaching-kids-to-code-by-a-13-year-old.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-shwetank-dixit-block--unblock--block----how-ad-blockers-are-being-circumvented--and-how-they-are-fighting-back" class="session sidetrack"><label for="fav-talk-shwetank-dixit-block--unblock--block----how-ad-blockers-are-being-circumvented--and-how-they-are-fighting-back" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Block, unblock, block! : How ad blockers are being circumvented, and how they are fighting back.</span><span class="speaker">Shwetank Dixit</span></label>
+                    <section id="talk-shwetank-dixit-block--unblock--block----how-ad-blockers-are-being-circumvented--and-how-they-are-fighting-back" class="session sidetrack"><label for="fav-talk-shwetank-dixit-block--unblock--block----how-ad-blockers-are-being-circumvented--and-how-they-are-fighting-back" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Block, unblock, block! : How ad blockers are being circumvented, and how they are fighting back.</span><span class="speaker">Shwetank Dixit</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>As usage of ad blocking software has risen over the years, an entire micro-industry has popped up catering to publishers - promising to get around the ad blocker and show ads to users of ad blocking software.</p>
@@ -459,7 +476,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-16:30" dateTime="2019-06-01 16:30 GMT+0200" class="slot"><input type="radio" id="fav-talk-aditya-mukerjee------translating-code-to-other--human--languages--and-back-again" name="fav-2019-06-01-16:30" class="fav__input" /><input type="radio" id="fav-talk-amanda-sopkin-what-js-developers-can-learn-from-medieval-coats-of-arms-about-accessibility" name="fav-2019-06-01-16:30" class="fav__input" />
                     <h2 class="slot__title">16:30</h2>
-                    <section id="talk-aditya-mukerjee------translating-code-to-other--human--languages--and-back-again" class="session backtrack"><label for="fav-talk-aditya-mukerjee------translating-code-to-other--human--languages--and-back-again" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">করো: Translating Code to Other (Human) Languages, and Back Again</span><span class="speaker">Aditya Mukerjee</span></label>
+                    <section id="talk-aditya-mukerjee------translating-code-to-other--human--languages--and-back-again" class="session backtrack"><label for="fav-talk-aditya-mukerjee------translating-code-to-other--human--languages--and-back-again" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">করো: Translating Code to Other (Human) Languages, and Back Again</span><span class="speaker">Aditya Mukerjee</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Javascript runs on nearly any platform. Most languages can compile to Javascript. It&#x2019;s well-positioned to become the lingua franca of programmers, with one problem: Like most programming languages, Javascript is based on English. 89% of the world&#x2019;s population doesn&#x2019;t speak any English. Many of those people can&#x2019;t even read the Latin script. If we want Javascript to be a lingua franca, we need to ensure it is accessible to all people, regardless of their native language.</p>
@@ -467,7 +484,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/aditya-mukerjee/translating-code-to-other-human-languages-and-back-again.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-amanda-sopkin-what-js-developers-can-learn-from-medieval-coats-of-arms-about-accessibility" class="session sidetrack"><label for="fav-talk-amanda-sopkin-what-js-developers-can-learn-from-medieval-coats-of-arms-about-accessibility" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">What JS Developers can Learn from Medieval Coats of Arms about Accessibility</span><span class="speaker">Amanda Sopkin</span></label>
+                    <section id="talk-amanda-sopkin-what-js-developers-can-learn-from-medieval-coats-of-arms-about-accessibility" class="session sidetrack"><label for="fav-talk-amanda-sopkin-what-js-developers-can-learn-from-medieval-coats-of-arms-about-accessibility" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">What JS Developers can Learn from Medieval Coats of Arms about Accessibility</span><span class="speaker">Amanda Sopkin</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Accessibility on the web for all groups including the visually and motor impaired is an important issue. But many of the usability lessons we explore on our products today are actually centuries old. Let&#x2019;s explore how these concepts are manifested in coats of arms throughout history. Come learn about what we can learn from the designers of medieval crests.</p>
@@ -477,14 +494,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-17:00" dateTime="2019-06-01 17:00 GMT+0200" class="slot"><input type="radio" id="fav-talk-marco-rogers-how-to-be-a-great-engineer--a-manager-s-take" name="fav-2019-06-01-17:00" class="fav__input" /><input type="radio" id="fav-talk-ziran-sun-buildin-an-end-to-end-iot-system-using-javascript-with--gdpr-awareness-" name="fav-2019-06-01-17:00" class="fav__input" />
                     <h2 class="slot__title">17:00</h2>
-                    <section id="talk-marco-rogers-how-to-be-a-great-engineer--a-manager-s-take" class="session backtrack"><label for="fav-talk-marco-rogers-how-to-be-a-great-engineer--a-manager-s-take" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">How To Be a Great Engineer, A Manager&#x27;s Take</span><span class="speaker">Marco Rogers</span></label>
+                    <section id="talk-marco-rogers-how-to-be-a-great-engineer--a-manager-s-take" class="session backtrack"><label for="fav-talk-marco-rogers-how-to-be-a-great-engineer--a-manager-s-take" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">How To Be a Great Engineer, A Manager&#x27;s Take</span><span class="speaker">Marco Rogers</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Our community has an important ongoing discourse about what it means to be a &#x201C;great engineer&#x201D;. We discuss a myriad of topics from technical mastery to productivity to mentoring. I&#x2019;ve been an engineer for along time and I have opinions about all of these. But does it matter what the boss thinks? I&#x2019;m also an engineering manager and I&#x2019;ve built several successful teams of engineers. I&#x2019;d like to offer an uncommonly candid view on what it means to be a successful engineer from the perspective of managers and leaders.</p>
                             <p><a href="https://2019.jsconf.eu/marco-rogers/how-to-be-a-great-engineer-a-managers-take.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-ziran-sun-buildin-an-end-to-end-iot-system-using-javascript-with--gdpr-awareness-" class="session sidetrack"><label for="fav-talk-ziran-sun-buildin-an-end-to-end-iot-system-using-javascript-with--gdpr-awareness-" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Build an end-to-end IoT system using JavaScript with &quot;GDPR awareness&quot;</span><span class="speaker">Ziran Sun</span></label>
+                    <section id="talk-ziran-sun-buildin-an-end-to-end-iot-system-using-javascript-with--gdpr-awareness-" class="session sidetrack"><label for="fav-talk-ziran-sun-buildin-an-end-to-end-iot-system-using-javascript-with--gdpr-awareness-" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Build an end-to-end IoT system using JavaScript with &quot;GDPR awareness&quot;</span><span class="speaker">Ziran Sun</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>This talk will discuss why we think that JavaScript is a good language option for IoT development by walking you through a loosely coupled end to end IoT system, from new device on-boarding to remote access via gateway.<br>Technologies we have been used and/or contributed to for building the IoT system using JavaScript will be discussed. At each stage, GDPR compliance of these technologies will be looked into.</p>
@@ -504,7 +521,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-17:45" dateTime="2019-06-01 17:45 GMT+0200" class="slot"><input type="radio" id="fav-talk-kat-march-n-tink--a-next-generation-package-manager" name="fav-2019-06-01-17:45" class="fav__input" /><input type="radio" id="fav-talk-marley-rafson-the-case-for-augmented-reality-on-the-web" name="fav-2019-06-01-17:45" class="fav__input" />
                     <h2 class="slot__title">17:45</h2>
-                    <section id="talk-kat-march-n-tink--a-next-generation-package-manager" class="session backtrack"><label for="fav-talk-kat-march-n-tink--a-next-generation-package-manager" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">tink: A Next Generation Package Manager</span><span class="speaker">Kat Marchán</span></label>
+                    <section id="talk-kat-march-n-tink--a-next-generation-package-manager" class="session backtrack"><label for="fav-talk-kat-march-n-tink--a-next-generation-package-manager" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">tink: A Next Generation Package Manager</span><span class="speaker">Kat Marchán</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>With nearly 1,000,000 packages, the npm ecosystem is the largest out there, by far &#x2013; but the ecosystem and its package manager were created in more humble times, for small projects and packages centered around the Node.js ecosystem itself.</p>
@@ -512,7 +529,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/kat-marchan/tink-a-next-generation-package-manager.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-marley-rafson-the-case-for-augmented-reality-on-the-web" class="session sidetrack"><label for="fav-talk-marley-rafson-the-case-for-augmented-reality-on-the-web" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">The Case for Augmented Reality on the Web</span><span class="speaker">Marley Rafson</span></label>
+                    <section id="talk-marley-rafson-the-case-for-augmented-reality-on-the-web" class="session sidetrack"><label for="fav-talk-marley-rafson-the-case-for-augmented-reality-on-the-web" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">The Case for Augmented Reality on the Web</span><span class="speaker">Marley Rafson</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Augmented reality is already making its way into everyday browsers! This talk will dive into what that might mean for the traditional web developer, and why developing immersive experiences makes so much sense on the web, even in the face of native alternatives. We will cover topics like off-the-shelf web technologies, performance, and privacy all in the context of augmented reality.</p>
@@ -522,14 +539,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-01-18:15" dateTime="2019-06-01 18:15 GMT+0200" class="slot"><input type="radio" id="fav-talk-ma-l-nison-yarn---2019-and-beyond" name="fav-2019-06-01-18:15" class="fav__input" /><input type="radio" id="fav-talk-manu-martinez-almeida-stencil--a-built-time-approach-to-the-web" name="fav-2019-06-01-18:15" class="fav__input" />
                     <h2 class="slot__title">18:15</h2>
-                    <section id="talk-ma-l-nison-yarn---2019-and-beyond" class="session backtrack"><label for="fav-talk-ma-l-nison-yarn---2019-and-beyond" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Yarn - 2019 and beyond</span><span class="speaker">Maël Nison</span></label>
+                    <section id="talk-ma-l-nison-yarn---2019-and-beyond" class="session backtrack"><label for="fav-talk-ma-l-nison-yarn---2019-and-beyond" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Yarn - 2019 and beyond</span><span class="speaker">Maël Nison</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Since its creation in 2016, Yarn continuously pushed for better standards in the JavaScript ecosystem in particular. Dependency locking, built-in monorepos, zero-network modes, Plug&#x2019;n&#x2019;Play resolution, we&#x2019;ve been on all fronts. Let&#x2019;s discuss what we have in store for the future, and what it means for our ecosystem!</p>
                             <p><a href="https://2019.jsconf.eu/mael-nison/yarn-2019-and-beyond.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-manu-martinez-almeida-stencil--a-built-time-approach-to-the-web" class="session sidetrack"><label for="fav-talk-manu-martinez-almeida-stencil--a-built-time-approach-to-the-web" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Stencil: a built-time approach to the web</span><span class="speaker">Manu Martinez-Almeida</span></label>
+                    <section id="talk-manu-martinez-almeida-stencil--a-built-time-approach-to-the-web" class="session sidetrack"><label for="fav-talk-manu-martinez-almeida-stencil--a-built-time-approach-to-the-web" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Stencil: a built-time approach to the web</span><span class="speaker">Manu Martinez-Almeida</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>We all know and love framework-like features such as hot module replacement, reactive properties, templating, CSS-in-JS, lazy-loaded bundling, etc. Stencil is a new approach, a build-time abstraction with framework-level productivity, that generates hand-optimized components using future-proof web APIs. We&#x2019;ll discuss the architecture of Stencil and the innovations a compiler can introduce to your apps and design systems!</p>
@@ -611,7 +628,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-10:00" dateTime="2019-06-02 10:00 GMT+0200" class="slot"><input type="radio" id="fav-talk-nick-kreeger-tensorflow-js--bringing-machine-learning-to-the-web-and-beyond-" name="fav-2019-06-02-10:00" class="fav__input" /><input type="radio" id="fav-talk-houssein-djirdeh-performance-empathy" name="fav-2019-06-02-10:00" class="fav__input" />
                     <h2 class="slot__title">10:00</h2>
-                    <section id="talk-nick-kreeger-tensorflow-js--bringing-machine-learning-to-the-web-and-beyond-" class="session backtrack"><label for="fav-talk-nick-kreeger-tensorflow-js--bringing-machine-learning-to-the-web-and-beyond-" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">TensorFlow.js: Bringing Machine Learning to the Web and Beyond.</span><span class="speaker">Nick Kreeger</span></label>
+                    <section id="talk-nick-kreeger-tensorflow-js--bringing-machine-learning-to-the-web-and-beyond-" class="session backtrack"><label for="fav-talk-nick-kreeger-tensorflow-js--bringing-machine-learning-to-the-web-and-beyond-" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">TensorFlow.js: Bringing Machine Learning to the Web and Beyond.</span><span class="speaker">Nick Kreeger</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Machine Learning is a powerful tool that offers unique opportunities for JavaScript developers. This is why we created TensorFlow.js, a library for training and deploying ML models in the browser and in Node.js. In this talk, you will learn about the TensorFlow.js ecosystem: how to bring an existing ML model into your JS app and re-train the model using your data. We&#x2019;ll also go over our efforts beyond the browser to bring ML to platforms such as React Native, Raspberry Pi, and Electron, and we&#x2019;ll do a live demo of some of our favorite and unique applications!</p>
@@ -619,7 +636,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/nikhil-thorat/tensorflowjs-bringing-machine-learning-to-the-web-and-beyond.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-houssein-djirdeh-performance-empathy" class="session sidetrack"><label for="fav-talk-houssein-djirdeh-performance-empathy" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Performance Empathy</span><span class="speaker">Houssein Djirdeh</span></label>
+                    <section id="talk-houssein-djirdeh-performance-empathy" class="session sidetrack"><label for="fav-talk-houssein-djirdeh-performance-empathy" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Performance Empathy</span><span class="speaker">Houssein Djirdeh</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Performance advocates spend a lot of time telling developers how to build fast and reliable experiences on the web. Every website is built differently, however.</p>
@@ -630,7 +647,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-10:30" dateTime="2019-06-02 10:30 GMT+0200" class="slot"><input type="radio" id="fav-talk-una-kravets-css-houdini---the-future-of-styling" name="fav-2019-06-02-10:30" class="fav__input" /><input type="radio" id="fav-talk-kevin-doran-offline-first-data--getting-bigger" name="fav-2019-06-02-10:30" class="fav__input" />
                     <h2 class="slot__title">10:30</h2>
-                    <section id="talk-una-kravets-css-houdini---the-future-of-styling" class="session backtrack"><label for="fav-talk-una-kravets-css-houdini---the-future-of-styling" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">CSS Houdini &amp; The Future of Styling</span><span class="speaker">Una Kravets</span></label>
+                    <section id="talk-una-kravets-css-houdini---the-future-of-styling" class="session backtrack"><label for="fav-talk-una-kravets-css-houdini---the-future-of-styling" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">CSS Houdini &amp; The Future of Styling</span><span class="speaker">Una Kravets</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>It&#x2019;s almost here! Houdini &#x2014; the future of CSS! This spec allows developers to write web worklets with JavaScript syntax and access the CSS Object Model for the very <em>first</em> time. Everything will change!</p>
@@ -638,7 +655,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/una-kravets/css-houdini-and-the-future-of-styling.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-kevin-doran-offline-first-data--getting-bigger" class="session sidetrack"><label for="fav-talk-kevin-doran-offline-first-data--getting-bigger" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Offline-first data: Getting Bigger</span><span class="speaker">Kevin Doran</span></label>
+                    <section id="talk-kevin-doran-offline-first-data--getting-bigger" class="session sidetrack"><label for="fav-talk-kevin-doran-offline-first-data--getting-bigger" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Offline-first data: Getting Bigger</span><span class="speaker">Kevin Doran</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Offline capable web apps have come a long way in just a few years. Tools like service workers, PouchDB &amp; CouchDB gave answers to the first questions of &#x201C;can we do this, where do we begin?&#x201D;, pushing new possibilities to the browser.</p>
@@ -649,7 +666,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-11:00" dateTime="2019-06-02 11:00 GMT+0200" class="slot"><input type="radio" id="fav-talk-ashley-williams-javascript-s-journey-to-the-edge" name="fav-2019-06-02-11:00" class="fav__input" /><input type="radio" id="fav-talk-bryan-hughes-the-contentious-relationship-between-the-lgbtq--community-and-tech" name="fav-2019-06-02-11:00" class="fav__input" />
                     <h2 class="slot__title">11:00</h2>
-                    <section id="talk-ashley-williams-javascript-s-journey-to-the-edge" class="session backtrack"><label for="fav-talk-ashley-williams-javascript-s-journey-to-the-edge" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">JavaScript&#x27;s Journey to the Edge</span><span class="speaker">Ashley Williams</span></label>
+                    <section id="talk-ashley-williams-javascript-s-journey-to-the-edge" class="session backtrack"><label for="fav-talk-ashley-williams-javascript-s-journey-to-the-edge" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">JavaScript&#x27;s Journey to the Edge</span><span class="speaker">Ashley Williams</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>In September of 2008, Google&#x2019;s Chromium Project released V8, a JavaScript engine, as part of a browser optimization wave that heralded the era of JavaScript browser applications that we both love, and love to hate. Less than a year later, in 2009, Ryan Dahl announced (at this very conference!) a way to run the V8 browser environment outside of the browser- Node.js, a platform that held the promise of unifying web application development, where both client and server side development could happen in the same language - JavaScript.</p>
@@ -658,7 +675,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/ashley-williams/javascripts-journey-to-the-edge.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-bryan-hughes-the-contentious-relationship-between-the-lgbtq--community-and-tech" class="session sidetrack"><label for="fav-talk-bryan-hughes-the-contentious-relationship-between-the-lgbtq--community-and-tech" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">The Contentious Relationship Between the LGBTQ+ community and Tech</span><span class="speaker">Bryan Hughes</span></label>
+                    <section id="talk-bryan-hughes-the-contentious-relationship-between-the-lgbtq--community-and-tech" class="session sidetrack"><label for="fav-talk-bryan-hughes-the-contentious-relationship-between-the-lgbtq--community-and-tech" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">The Contentious Relationship Between the LGBTQ+ community and Tech</span><span class="speaker">Bryan Hughes</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>&#x201C;Queers hate techies,&#x201D; the slogan proudly proclaimed in a window in San Francisco. Being a queer techie, I was immediately conflicted.</p>
@@ -670,14 +687,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-11:45" dateTime="2019-06-02 11:45 GMT+0200" class="slot"><input type="radio" id="fav-talk-maxim-koretskyi-a-sneak-peek-into-super-optimized-code-in-js-frameworks" name="fav-2019-06-02-11:45" class="fav__input" /><input type="radio" id="fav-talk-johnny-austin-finding-your-abstraction-sweet-spot" name="fav-2019-06-02-11:45" class="fav__input" />
                     <h2 class="slot__title">11:45</h2>
-                    <section id="talk-maxim-koretskyi-a-sneak-peek-into-super-optimized-code-in-js-frameworks" class="session backtrack"><label for="fav-talk-maxim-koretskyi-a-sneak-peek-into-super-optimized-code-in-js-frameworks" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">A sneak peek into super optimized code in JS frameworks</span><span class="speaker">Maxim Koretskyi</span></label>
+                    <section id="talk-maxim-koretskyi-a-sneak-peek-into-super-optimized-code-in-js-frameworks" class="session backtrack"><label for="fav-talk-maxim-koretskyi-a-sneak-peek-into-super-optimized-code-in-js-frameworks" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">A sneak peek into super optimized code in JS frameworks</span><span class="speaker">Maxim Koretskyi</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Very few developers have the need to write super optimized code. In application development we tend to favor readability over optimization. But that&#x2019;s not the case with frameworks. Developers who use frameworks expect them to run as fast as possible. In fact, speed is often a defining characteristic when choosing a framework. There are techniques that make code run faster. You&#x2019;ve probably heard about linked lists, monomorphism and bitmasks, right? Maybe you&#x2019;ve even used some. Well, you can find all these and a bunch of other interesting approaches in the sources of most popular JS frameworks. Over the past year I&#x2019;ve seen a lot while reverse-engineering Angular and React. In this talk I want to share my findings with you. Some of you may end up applying them at work. And others, who knows, may even end up writing the next big framework.</p>
                             <p><a href="https://2019.jsconf.eu/maxim-koretskyi/a-sneak-peek-into-super-optimized-code-in-js-frameworks.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-johnny-austin-finding-your-abstraction-sweet-spot" class="session sidetrack"><label for="fav-talk-johnny-austin-finding-your-abstraction-sweet-spot" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Finding Your Abstraction Sweet Spot</span><span class="speaker">Johnny Austin</span></label>
+                    <section id="talk-johnny-austin-finding-your-abstraction-sweet-spot" class="session sidetrack"><label for="fav-talk-johnny-austin-finding-your-abstraction-sweet-spot" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Finding Your Abstraction Sweet Spot</span><span class="speaker">Johnny Austin</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Many would argue there are only two hard problems in software: naming and cache invalidation. I&#x2019;d argue there&#x2019;s a third problem - abstractions. Whether you&#x2019;re implementing an API for devs outside of your organization or creating a reusable library for devs on your team, creating the right level of abstraction is difficult. You have to balance flexibility with the ease-of-use. The correct choice is often a function of time constraints, compromise, and trial &amp; error. I&#x2019;ll talk about how to navigate these issues more efficiently.</p>
@@ -687,7 +704,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-12:15" dateTime="2019-06-02 12:15 GMT+0200" class="slot"><input type="radio" id="fav-talk-chris-sun-developer-above-the-sea-of-client-side-fog--frontend-observability-for-user-happiness" name="fav-2019-06-02-12:15" class="fav__input" /><input type="radio" id="fav-talk-alexandra-sunderland-bringing-back-dial-up--the-internet-over-sms" name="fav-2019-06-02-12:15" class="fav__input" />
                     <h2 class="slot__title">12:15</h2>
-                    <section id="talk-chris-sun-developer-above-the-sea-of-client-side-fog--frontend-observability-for-user-happiness" class="session backtrack"><label for="fav-talk-chris-sun-developer-above-the-sea-of-client-side-fog--frontend-observability-for-user-happiness" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Developer above the Sea of Client-side Fog: Frontend Observability for User Happiness</span><span class="speaker">Chris Sun</span></label>
+                    <section id="talk-chris-sun-developer-above-the-sea-of-client-side-fog--frontend-observability-for-user-happiness" class="session backtrack"><label for="fav-talk-chris-sun-developer-above-the-sea-of-client-side-fog--frontend-observability-for-user-happiness" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Developer above the Sea of Client-side Fog: Frontend Observability for User Happiness</span><span class="speaker">Chris Sun</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>How fast and reliable your backend is doesn&#x2019;t matter if you haven&#x2019;t found a way to pass those optimisations on to your users. As heavy-lifting application logic moves increasingly beyond the monitored server to the client-side shadowlands, traditional metrics no longer sufficiently capture the story of your application&#x2019;s performance. How can you gain clarity into how your code behaves in production, across a potpourri of device species, workflows, behind a shroud of complex js logic, in the hands of your users?</p>
@@ -695,7 +712,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/chris-sun/developer-above-the-sea-of-client-side-fog-frontend-observability-for-user-happiness.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-alexandra-sunderland-bringing-back-dial-up--the-internet-over-sms" class="session sidetrack"><label for="fav-talk-alexandra-sunderland-bringing-back-dial-up--the-internet-over-sms" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Bringing back dial-up: the internet over SMS</span><span class="speaker">Alexandra Sunderland</span></label>
+                    <section id="talk-alexandra-sunderland-bringing-back-dial-up--the-internet-over-sms" class="session sidetrack"><label for="fav-talk-alexandra-sunderland-bringing-back-dial-up--the-internet-over-sms" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Bringing back dial-up: the internet over SMS</span><span class="speaker">Alexandra Sunderland</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Travelling to JSConf EU from another country? You probably had to pay an arm and a leg for a data roaming package on your phone. But there&#x2019;s a better way! What if I told you that you could stay connected to the internet with a phone that can only send and receive text messages? In this talk we&#x2019;ll build our own browser that makes all requests over SMS, so that next time you can forget about that fancy data package.</p>
@@ -705,14 +722,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-12:45" dateTime="2019-06-02 12:45 GMT+0200" class="slot"><input type="radio" id="fav-talk-ella-van-durpe-designing-a-rich-text-data-structure-for-a-third-of-the-internet" name="fav-2019-06-02-12:45" class="fav__input" /><input type="radio" id="fav-talk-chidinma-kalu-why-can-t-we-all-just-get-along-" name="fav-2019-06-02-12:45" class="fav__input" />
                     <h2 class="slot__title">12:45</h2>
-                    <section id="talk-ella-van-durpe-designing-a-rich-text-data-structure-for-a-third-of-the-internet" class="session backtrack"><label for="fav-talk-ella-van-durpe-designing-a-rich-text-data-structure-for-a-third-of-the-internet" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Designing a Rich Content Editor for a Third of the Web</span><span class="speaker">Ella van Durpe</span></label>
+                    <section id="talk-ella-van-durpe-designing-a-rich-text-data-structure-for-a-third-of-the-internet" class="session backtrack"><label for="fav-talk-ella-van-durpe-designing-a-rich-text-data-structure-for-a-third-of-the-internet" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Designing a Rich Content Editor for a Third of the Web</span><span class="speaker">Ella van Durpe</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>How WordPress built its own brand new visual editor experience from the ground up. The talk will include an introduction of WordPress and how the Gutenberg editor project started, details of how it works and how we incrementally improved the block editor over two years, and what our plans are for the future.</p>
                             <p><a href="https://2019.jsconf.eu/ella-van-durpe/designing-a-rich-content-editor-for-a-third-of-the-web.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-chidinma-kalu-why-can-t-we-all-just-get-along-" class="session sidetrack"><label for="fav-talk-chidinma-kalu-why-can-t-we-all-just-get-along-" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Why Can’t We All Just Get Along?</span><span class="speaker">Chidinma Kalu</span></label>
+                    <section id="talk-chidinma-kalu-why-can-t-we-all-just-get-along-" class="session sidetrack"><label for="fav-talk-chidinma-kalu-why-can-t-we-all-just-get-along-" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Why Can’t We All Just Get Along?</span><span class="speaker">Chidinma Kalu</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>There&#x2019;s a divisive movement around the world which has arguable impacted the software development community. How can we remain open-minded and respectful when talking about different programming paradigms or languages?</p>
@@ -733,14 +750,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-14:15" dateTime="2019-06-02 14:15 GMT+0200" class="slot"><input type="radio" id="fav-talk-meya-stephen-kenigbolo-javascript-is-for-everyone-" name="fav-2019-06-02-14:15" class="fav__input" /><input type="radio" id="fav-talk-fedor-indutny-llhttp---new-http-1-1-parser-for-node-js" name="fav-2019-06-02-14:15" class="fav__input" />
                     <h2 class="slot__title">14:15</h2>
-                    <section id="talk-meya-stephen-kenigbolo-javascript-is-for-everyone-" class="session backtrack"><label for="fav-talk-meya-stephen-kenigbolo-javascript-is-for-everyone-" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Javascript is for Everyone!</span><span class="speaker">Meya Stephen Kenigbolo</span></label>
+                    <section id="talk-meya-stephen-kenigbolo-javascript-is-for-everyone-" class="session backtrack"><label for="fav-talk-meya-stephen-kenigbolo-javascript-is-for-everyone-" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Javascript is for Everyone!</span><span class="speaker">Meya Stephen Kenigbolo</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Teaching absolute beginners with no technical experience whatsoever to understand Javascript can be quite a daunting task. It&#x2019;s more challenging if you have a thick British accent and your students are mostly African students. If you&#x2019;ve ever designed a tech curriculum then you understand how complicated this can be. At code Afrique where we help the community by offering a free weekend intensive bootcamp, we explored and have now achieved success with ember where we had earlier failed. The aim of this talk is to show, what we tried, where we failed and how Javascript via Ember brought us success like no other.</p>
                             <p><a href="https://2019.jsconf.eu/meya-stephen-kenigbolo/javascript-is-for-everyone.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-fedor-indutny-llhttp---new-http-1-1-parser-for-node-js" class="session sidetrack"><label for="fav-talk-fedor-indutny-llhttp---new-http-1-1-parser-for-node-js" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">llhttp - new HTTP 1.1 parser for Node.js</span><span class="speaker">Fedor Indutny</span></label>
+                    <section id="talk-fedor-indutny-llhttp---new-http-1-1-parser-for-node-js" class="session sidetrack"><label for="fav-talk-fedor-indutny-llhttp---new-http-1-1-parser-for-node-js" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">llhttp - new HTTP 1.1 parser for Node.js</span><span class="speaker">Fedor Indutny</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Node.js has been using a derivative of nginx&#x2019;s parser with a lot of customization/rewrite since its inception. Despite being fast enough, the project architecture made it very hard to maintain in a long run. To mitigate that, the author has created a tool to generate the new HTTP parser called &#x201C;llhttp&#x201D; from the TypeScript code in understandable, verifiable, and maintainable way. Incidentally, the performance of &#x201C;llhttp&#x201D; is two times better than of the old parser. In this talk we&#x2019;ll walk through the basics of generating such parsers and how &#x201C;llhttp&#x201D; works.</p>
@@ -750,14 +767,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-14:45" dateTime="2019-06-02 14:45 GMT+0200" class="slot"><input type="radio" id="fav-talk-maximiliano-firtman-the-modern-pwa-cheat-sheet" name="fav-2019-06-02-14:45" class="fav__input" /><input type="radio" id="fav-talk-joyee-cheung-web-apis-in-node-js-core--past--present--and-future" name="fav-2019-06-02-14:45" class="fav__input" />
                     <h2 class="slot__title">14:45</h2>
-                    <section id="talk-maximiliano-firtman-the-modern-pwa-cheat-sheet" class="session backtrack"><label for="fav-talk-maximiliano-firtman-the-modern-pwa-cheat-sheet" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">The modern PWA Cheat Sheet</span><span class="speaker">Maximiliano Firtman</span></label>
+                    <section id="talk-maximiliano-firtman-the-modern-pwa-cheat-sheet" class="session backtrack"><label for="fav-talk-maximiliano-firtman-the-modern-pwa-cheat-sheet" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">The modern PWA Cheat Sheet</span><span class="speaker">Maximiliano Firtman</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>PWAs are now installable on every mobile and desktop OSs, but there is a lot of new things since last year we need to do to create a successful experience. We will start understanding the App Lifecycle on every OS including new APIs, the limitations on iOS and how to deal with them, and how WebAPK works on Android. We will mention challenges on desktop PWAs, including multi-window management and we will finally cover distribution channels, including new DOM events to improve analytics, how to create a custom Install experience, and how to distribute the app in the store.</p>
                             <p><a href="https://2019.jsconf.eu/maximiliano-firtman/the-modern-pwa-cheat-sheet.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-joyee-cheung-web-apis-in-node-js-core--past--present--and-future" class="session sidetrack"><label for="fav-talk-joyee-cheung-web-apis-in-node-js-core--past--present--and-future" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Web APIs in Node.js Core: Past, Present, and Future</span><span class="speaker">Joyee Cheung</span></label>
+                    <section id="talk-joyee-cheung-web-apis-in-node-js-core--past--present--and-future" class="session sidetrack"><label for="fav-talk-joyee-cheung-web-apis-in-node-js-core--past--present--and-future" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Web APIs in Node.js Core: Past, Present, and Future</span><span class="speaker">Joyee Cheung</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Web APIs developed and standardized by the browsers have been serving client-side JavaScript applications with a wide selection of features out of the box, while Node.js have been developing another set of APIs that are today the de-facto standards for server-side JavaScript runtimes. There is now a conscious effort to bring the two worlds closer together, in particular by introducing more Web APIs into Node.js core, but it&#x2019;s not an easy ride - not every Web API, designed for the browsers, makes sense for Node.js.</p>
@@ -768,14 +785,14 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-15:15" dateTime="2019-06-02 15:15 GMT+0200" class="slot"><input type="radio" id="fav-talk-allison-mcmillan-bdd--baby-driven-development" name="fav-2019-06-02-15:15" class="fav__input" /><input type="radio" id="fav-talk-joe-sepi-promises-api-in-node-js-core--where-we-are-and-where-we-ll-get-to" name="fav-2019-06-02-15:15" class="fav__input" />
                     <h2 class="slot__title">15:15</h2>
-                    <section id="talk-allison-mcmillan-bdd--baby-driven-development" class="session backtrack"><label for="fav-talk-allison-mcmillan-bdd--baby-driven-development" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">BDD: Baby Driven Development</span><span class="speaker">Allison McMillan</span></label>
+                    <section id="talk-allison-mcmillan-bdd--baby-driven-development" class="session backtrack"><label for="fav-talk-allison-mcmillan-bdd--baby-driven-development" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">BDD: Baby Driven Development</span><span class="speaker">Allison McMillan</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>When I became a parent, I was completely unprepared for the challenges that awaited me. I reached out to hundreds of fellow parents in tech and learned there are common challenges that simply aren&#x2019;t spoken about. These focus around one fact that no one wants to admit&#x2026; parenting is not fun. Parenting is stressful, difficult, and oftentimes incredibly lonely. But being a parent also makes people more organized, focused, and empathetic. We&#x2019;ll explore these survey results to expose common trends and issues and discuss solutions that show how supporting parents helps all team members thrive.</p>
                             <p><a href="https://2019.jsconf.eu/allison-mcmillan/bdd-baby-driven-development.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-joe-sepi-promises-api-in-node-js-core--where-we-are-and-where-we-ll-get-to" class="session sidetrack"><label for="fav-talk-joe-sepi-promises-api-in-node-js-core--where-we-are-and-where-we-ll-get-to" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Promises API in Node.js core: where we are and where we’ll get to</span><span class="speaker">Joe Sepi</span></label>
+                    <section id="talk-joe-sepi-promises-api-in-node-js-core--where-we-are-and-where-we-ll-get-to" class="session sidetrack"><label for="fav-talk-joe-sepi-promises-api-in-node-js-core--where-we-are-and-where-we-ll-get-to" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Promises API in Node.js core: where we are and where we’ll get to</span><span class="speaker">Joe Sepi</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Currently only &#x2018;fs&#x2019; and &#x2018;dns&#x2019; have an experimental promise api in Node core. People LOL at node.js core modules for still using the callback pattern. I could launch into a bunch of puns here but instead I&#x2019;ll just say the current status is sad but fixable. Where are we? What do we need to do? How can you help?</p>
@@ -796,7 +813,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-16:15" dateTime="2019-06-02 16:15 GMT+0200" class="slot"><input type="radio" id="fav-talk-openjs-foundation-panel---ama" name="fav-2019-06-02-16:15" class="fav__input" /><input type="radio" id="fav-talk-stanimira-vlaeva-embedding-v8-in-the-real-world" name="fav-2019-06-02-16:15" class="fav__input" />
                     <h2 class="slot__title">16:15</h2>
-                    <section id="talk-openjs-foundation-panel---ama" class="session backtrack"><label for="fav-talk-openjs-foundation-panel---ama" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Panel: +1 to a Collaborative Future ~ the Foundation of JavaScript</span><span class="speaker">OpenJS Foundation</span></label>
+                    <section id="talk-openjs-foundation-panel---ama" class="session backtrack"><label for="fav-talk-openjs-foundation-panel---ama" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Panel: +1 to a Collaborative Future ~ the Foundation of JavaScript</span><span class="speaker">OpenJS Foundation</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>The JavaScript ecosystem has been breaking ground in both the Browser and in the backend with Node.js since JSConfEU launched 10 years ago. We&#x2019;ve recently recognized that in the same way that using JavaScript both on the front and back end unlocks opportunities for more people to contribute to a larger part of an overall application, combining the JavaScript and Node.js Foundations allows for easier collaboration and contribution to larger portions of the JavaScript ecosystem. This panel will cover the key issues, concerns, discussions, and lessons learned that were part of the effort to bring the JavaScript and Node.js Foundations together. We&#x2019;ll also dive into the new opportunities and exciting future it brings to people and projects across the JS ecosystem.</p>
@@ -811,7 +828,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/openjs-foundation/panel-1-to-a-collaborative-future-~-the-foundation-of-javascript.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-stanimira-vlaeva-embedding-v8-in-the-real-world" class="session sidetrack"><label for="fav-talk-stanimira-vlaeva-embedding-v8-in-the-real-world" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Embedding V8 in the real world</span><span class="speaker">Stanimira Vlaeva</span></label>
+                    <section id="talk-stanimira-vlaeva-embedding-v8-in-the-real-world" class="session sidetrack"><label for="fav-talk-stanimira-vlaeva-embedding-v8-in-the-real-world" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Embedding V8 in the real world</span><span class="speaker">Stanimira Vlaeva</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>V8 is the JavaScript engine powering Google Chrome, Node.js and NativeScript. NativeScript embeds V8 to process JavaScript and dynamically call Android APIs. This enables developers to write Android applications in JavaScript and directly access the underlying OS. Come to this session to learn what challenges the NativeScript team met embedding V8 in a mobile framework and how you can power any C++ based application with one of the most sophisticated JavaScript engines.</p>
@@ -821,7 +838,7 @@ header a.active {
                 </section>
                 <section id="slot-2019-06-02-16:45" dateTime="2019-06-02 16:45 GMT+0200" class="slot"><input type="radio" id="fav-talk-leandro-ostera-building-webapps-like-it-s-1972------" name="fav-2019-06-02-16:45" class="fav__input" /><input type="radio" id="fav-talk-pier-paolo-fumagalli-tales-from-the-toilet--how-javascript-helps-the-production-of-tissue-papers" name="fav-2019-06-02-16:45" class="fav__input" />
                     <h2 class="slot__title">16:45</h2>
-                    <section id="talk-leandro-ostera-building-webapps-like-it-s-1972------" class="session backtrack"><label for="fav-talk-leandro-ostera-building-webapps-like-it-s-1972------" class="fav__label"><span class="track">Back Track</span><span class="what" role="heading" aria-level="3">Building WebApps Like It&#x27;s 1972 🧙‍♂️</span><span class="speaker">Leandro Ostera</span></label>
+                    <section id="talk-leandro-ostera-building-webapps-like-it-s-1972------" class="session backtrack"><label for="fav-talk-leandro-ostera-building-webapps-like-it-s-1972------" class="fav__label"><span class="track">Back Track</span></label><span class="what" role="heading" aria-level="3">Building WebApps Like It&#x27;s 1972 🧙‍♂️</span><span class="speaker">Leandro Ostera</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>The year is 1972 and GUI applications like no one has seen before are being built in Smalltalk: bitmaps graphics, draggable elements, drop-down menus, collapsable windows &#x1F92F;; all of them and many more coming straight from the future, powered by asynchronous message passing, object orientation, and functional programming. An unprecedented cocktail to be later rediscovered as the Actor-model.</p>
@@ -830,7 +847,7 @@ header a.active {
                             <p><a href="https://2019.jsconf.eu/leandro-ostera/building-webapps-like-its-1972-male.html" target="_blank" rel="noopener">More info</a></p>
                         </details>
                     </section>
-                    <section id="talk-pier-paolo-fumagalli-tales-from-the-toilet--how-javascript-helps-the-production-of-tissue-papers" class="session sidetrack"><label for="fav-talk-pier-paolo-fumagalli-tales-from-the-toilet--how-javascript-helps-the-production-of-tissue-papers" class="fav__label"><span class="track">Side Track</span><span class="what" role="heading" aria-level="3">Tales from the Toilet: how Javascript helps the production of tissue papers</span><span class="speaker">Pier Paolo Fumagalli</span></label>
+                    <section id="talk-pier-paolo-fumagalli-tales-from-the-toilet--how-javascript-helps-the-production-of-tissue-papers" class="session sidetrack"><label for="fav-talk-pier-paolo-fumagalli-tales-from-the-toilet--how-javascript-helps-the-production-of-tissue-papers" class="fav__label"><span class="track">Side Track</span></label><span class="what" role="heading" aria-level="3">Tales from the Toilet: how Javascript helps the production of tissue papers</span><span class="speaker">Pier Paolo Fumagalli</span>
                         <details class="description">
                             <summary>description</summary>
                             <p>Producing tissue paper, kitchen rolls, folded napkins or toilet paper is not for the faint of heart. Gigantic machines rewind huge rolls of tissue paper weighing almost a ton processing it at a speed of 40 km/h, and a single minute of downtime cuts into the slim margins of the paper industry.</p>
