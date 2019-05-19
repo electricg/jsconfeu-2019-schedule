@@ -2,11 +2,22 @@ import Document from 'next/document';
 import Head from './_head';
 import Main from './_main';
 
-import { version } from '../package.json';
+import { version, config, homepage } from '../package.json';
 
 import css from 'raw-loader!../src/static/css/style.css';
 // Enforce that only the loader in the import statement is used by prefixing it with a !
 import js from '!raw-loader!../src/static/js/script.js';
+
+const { nameLong, nameShort, days } = config;
+const daysFormatted = days.map(day => `\`${day}\``).join(',');
+
+const prejs = `
+window['🦄'] = {
+    repo: '${homepage}',
+    namespace: '${nameShort}',
+    days: [${daysFormatted}],
+};
+`;
 
 class MyDocument extends Document {
     render() {
@@ -26,10 +37,7 @@ class MyDocument extends Document {
 
                     <link rel="manifest" href="/static/manifest.json" />
 
-                    <link
-                        rel="all-the-source"
-                        href="https://github.com/electricg/jsconfeu-2019-schedule"
-                    />
+                    <link rel="all-the-source" href={homepage} />
 
                     <link
                         href="/static/images/icons/icon-32x32.png"
@@ -44,7 +52,7 @@ class MyDocument extends Document {
                         type="image/png"
                     />
 
-                    <title>JSConf EU 2019 Schedule</title>
+                    <title>{nameLong}</title>
 
                     <script
                         dangerouslySetInnerHTML={{
@@ -86,6 +94,7 @@ class MyDocument extends Document {
                         />
                     </div>
 
+                    <script dangerouslySetInnerHTML={{ __html: prejs }} />
                     <script dangerouslySetInnerHTML={{ __html: js }} />
                 </body>
             </html>

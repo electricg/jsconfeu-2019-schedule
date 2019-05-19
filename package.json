@@ -6,6 +6,15 @@
   "private": true,
   "config": {
     "outputFolder": "jsconfeu-2019-schedule"
+    "inputUrl": "https://2019.jsconf.eu/schedule/timetable.html",
+    "nowName": "jsconfeu-2019-schedule",
+    "nowAlias": "2019-jsconfeu-schedule",
+    "nameLong": "JSConf EU 2019 scheduleTODO",
+    "nameShort": "jsconfeu19TODO",
+    "days": [
+      "2019-05-18",
+      "2019-06-02"
+    ]
   },
   "scripts": {
     "dev": "node server-dev.js",
@@ -14,10 +23,11 @@
     "beautify": "html-beautify $npm_package_config_outputFolder/index.html -r -T style -T script",
     "export": "rm -rf $npm_package_config_outputFolder && NODE_ENV=production next build && next export -o $npm_package_config_outputFolder && rm -rf $npm_package_config_outputFolder/_next && cp src/static/js/sw.js $npm_package_config_outputFolder/ && sed -i -e 's/@VERSION@/'$npm_package_version'/g' $npm_package_config_outputFolder/sw.js && rm -rf $npm_package_config_outputFolder/sw.js-e && npm run beautify",
     "static": "npm run export && node server-static.js",
-    "now-deploy": "cd $npm_package_config_outputFolder && now --public --regions bru",
-    "now-alias": "now alias https://weird-generated-url.now.sh 2019-jsconfeu-schedule"
+    "now-deploy": "cd $npm_package_config_outputFolder && now",
+    "now-alias": "now alias https://$npm_package_config_nowName.electric-g.now.sh $npm_package_config_nowAlias"
   },
   "author": "Giulia Alfonsi",
+  "homepage": "https://github.com/electricg/jsconfeu-2019-scheduleTODO",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.0.1",

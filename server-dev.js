@@ -6,14 +6,14 @@ const next = require('next');
 const { parseData } = require('./src/utils');
 
 const _package = require('./package.json');
-const { version } = _package;
+const { version, config } = _package;
+const { inputUrl } = config;
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-app
-    .prepare()
+app.prepare()
     .then(() => {
         const server = express();
 
@@ -30,7 +30,7 @@ app
         });
 
         server.get('/schedule.json', async (req, res) => {
-            const html = await axios.get('https://2019.jsconf.eu/schedule/timetable.html');
+            const html = await axios.get(inputUrl);
             const schedule = parseData(html.data);
 
             res.set('Content-Type', 'application/json');

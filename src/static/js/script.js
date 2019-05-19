@@ -1,6 +1,6 @@
 //=== Save fav sessions
 (function() {
-    const namespace = 'jsconfeu-2019-schedule';
+    const namespace = window['🦄'].namespace;
     const inputs = [...document.querySelectorAll('input[type=radio]')];
 
     /**
@@ -154,7 +154,6 @@
      * Scroll to slot
      */
     const scrollToSlot = () => {
-        // const date = '2019-06-03 13:56 GMT+0200';
         const date = new Date();
         // header height including border and padding
         const header = document.querySelector('header');
@@ -291,7 +290,7 @@
                 });
         });
 
-        if (1) {
+        if (0) {
             isSWInstalled = swCheckStatus();
 
             if (isSWInstalled) {
@@ -319,8 +318,6 @@
 
 //=== (╯°□°)╯︵ ┻━┻
 (function() {
-    console.log(
-        '🦄 GitHub repo: https://github.com/electricg/jsconfeu-2019-schedule'
-    );
+    console.log(`🦄 GitHub repo: ${window['🦄'].repo}`);
     console.log('😴 Made by https://twitter.com/electric_g');
 })();
