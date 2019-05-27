@@ -13,13 +13,15 @@ const _package = require('./package.json');
 const { config } = _package;
 const { outputFolder } = config;
 
-const doIt = async () => {
+const json = async () => {
     // save schedule.html
     await saveScheduleHtml();
 
     // schedule.json
     saveScheduleJson();
+};
 
+const build = () => {
     // delete output folder
     deleteFolder(outputFolder);
 
@@ -42,10 +44,32 @@ const doIt = async () => {
     // run beautify
     exec('npm run beautify');
     console.log('beautified');
+};
 
+const deploy = () => {
     // deploy
     exec('npm run now-deploy && npm run now-alias');
     console.log('deployed');
 };
 
-doIt();
+const all = async () => {
+    await json();
+    build();
+    deploy();
+};
+
+if (process.argv.includes('json')) {
+    json();
+}
+
+if (process.argv.includes('build')) {
+    build();
+}
+
+if (process.argv.includes('deploy')) {
+    deploy();
+}
+
+if (process.argv.includes('all')) {
+    all();
+}

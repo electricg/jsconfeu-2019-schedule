@@ -1,6 +1,6 @@
 {
   "name": "jsconfeu-2019-schedule",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "JSConf EU 2019 schedule",
   "main": "index.js",
   "private": true,
@@ -25,7 +25,10 @@
     "static": "node server-static.js",
     "now-deploy": "cd $npm_package_config_outputFolder && now",
     "now-alias": "now alias https://$npm_package_config_nowName.electric-g.now.sh $npm_package_config_nowAlias",
-    "all": "node export.js"
+    "json": "node export.js json",
+    "build": "node export.js build",
+    "deploy": "node export.js deploy",
+    "all": "node export.js all"
   },
   "author": "Giulia Alfonsi",
   "homepage": "https://github.com/electricg/jsconfeu-2019-schedule",
