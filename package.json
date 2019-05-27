@@ -28,6 +28,7 @@
     "json": "node export.js json",
     "build": "node export.js build",
     "deploy": "node export.js deploy",
+    "patch": "npm --no-git-tag-version version patch",
     "all": "node export.js all"
   },
   "author": "Giulia Alfonsi",

@@ -22,6 +22,10 @@ const json = async () => {
 };
 
 const build = () => {
+    // update package version
+    exec('npm run patch');
+    console.log('bumped version');
+
     // delete output folder
     deleteFolder(outputFolder);
 
