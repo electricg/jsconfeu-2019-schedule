@@ -23,8 +23,10 @@ const json = async () => {
 
 const build = () => {
     // update package version
-    exec('npm run patch');
-    console.log('bumped version');
+    const output = exec('npm run patch').toString();
+    const last = output.lastIndexOf('v');
+    const ver = output.substring(last + 1);
+    console.log(`bumped version to ${ver}`);
 
     // delete output folder
     deleteFolder(outputFolder);
@@ -37,7 +39,7 @@ const build = () => {
     deleteFolder(`${outputFolder}/_next`);
 
     // add sw.js
-    writeFileSWJS();
+    writeFileSWJS(ver);
 
     // add manifest.json
     writeFileManifestJson();

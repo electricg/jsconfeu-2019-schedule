@@ -116,17 +116,17 @@ const saveScheduleJson = () => {
     console.log('wrote schedule.json');
 };
 
-const createFileSWJS = () => {
+const createFileSWJS = ver => {
     const content = fs.readFileSync(
         `${__dirname}/../../src/static/js/sw.js`,
         'utf8'
     );
-    const js = content.replace('@VERSION@', version);
+    const js = content.replace('@VERSION@', ver || version);
     return js;
 };
 
-const writeFileSWJS = () => {
-    const js = createFileSWJS();
+const writeFileSWJS = ver => {
+    const js = createFileSWJS(ver);
     fs.writeFileSync(`${__dirname}/../../${outputFolder}/sw.js`, js);
     console.log('wrote sw.js');
 };
