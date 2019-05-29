@@ -85,6 +85,17 @@
                 "trackId": "bipocit",
                 "trackName": "BIPoCiT Space",
                 "description": "<p>This presentation will explore basic approaches we can use as local communities to supporting diversity in tech by encouraging inclusivity for the tech communities.</p><p><a href=\"https://2019.jsconf.eu/hasan-ozdemir/building-substratum-for-an-inclusive-tech-community.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
+            },
+            "sponsor": {
+                "id": "talk-2019-06-01-11-00-4",
+                "datetime": "2019-06-01 11:00 GMT+0200",
+                "day": "2019-06-01",
+                "time": "11:00",
+                "who": "",
+                "what": "Mozilla WebThings Workshop",
+                "trackId": "sponsor",
+                "trackName": "Sponsor Booth",
+                "description": "<a href=\"https://2019.jsconf.eu/sponsors/mozilla-webthings-workshop.html\" target=\"_blank\" rel=\"noopener\">Details and registration</a>"
             }
         },
         "11:30": {
@@ -181,6 +192,17 @@
                 "trackId": "community",
                 "trackName": "Community Lounge",
                 "description": "Recharge with some inspiration during the break at the Community Lounge, where you&apos;ll hear several 5-minute stories of gratitude that highlight amazing people, their efforts, and the impact they&apos;ve had on our community members.<p></p><p><strong>Our session begins 5 minutes after the break starts</strong>, so you have some time to grab a quick refreshment or take a short pause after the previous session. <strong>We&apos;ll finish up halfway through the lunch break</strong> so you&apos;ll still have plenty of time to eat the delicious catered meal.</p>"
+            },
+            "livejs": {
+                "id": "talk-2019-06-01-13-00-3",
+                "datetime": "2019-06-01 13:00 GMT+0200",
+                "day": "2019-06-01",
+                "time": "13:00",
+                "who": "",
+                "what": "Meet & Greet / LiveJS Jaaam / Rumyra & halfbyte",
+                "trackId": "livejs",
+                "trackName": "live:js Stage",
+                "description": "Welcome to { Live : JS } A collective of audio and visual artists who build live experiences, shows and installations. Why JS? Because that&apos;s the main technology we use: JavaScript."
             }
         },
         "14:00": {
@@ -288,6 +310,17 @@
                 "trackId": "bipocit",
                 "trackName": "BIPoCiT Space",
                 "description": "<p>Many if not all of us have been &#x201C;the only one&#x201D; in boardrooms, design reviews, diversity and inclusion discussions. Our isolation from people who look like us with similar lived experiences often forces us into roles where we speak on behalf of and advocate for the whole.</p><p>While honourable and sometimes necessary for self and community preservation, repeatedly playing this role can incur a psychological and career debt: it spends our resources in ways we don&#x2019;t choose.</p><p>Through this talk, we&#x2019;ll seek the balance between our moral imperatives to society, improvement of our environments, and our care to ourselves. We will celebrate the forgiveness for our past and future choices, recognising that the choices we make are never easy.</p><p><a href=\"https://2019.jsconf.eu/tatiana-mac/the-technical-debt-for-us.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
+            },
+            "livejs": {
+                "id": "talk-2019-06-01-15-30-4",
+                "datetime": "2019-06-01 15:30 GMT+0200",
+                "day": "2019-06-01",
+                "time": "15:30",
+                "who": "",
+                "what": "Performance / Asja Baidakova & 2xAA",
+                "trackId": "livejs",
+                "trackName": "live:js Stage",
+                "description": "Welcome to { Live : JS } A collective of audio and visual artists who build live experiences, shows and installations. Why JS? Because that&apos;s the main technology we use: JavaScript."
             }
         },
         "16:00": {
@@ -636,6 +669,17 @@
                 "trackId": "bipocit",
                 "trackName": "BIPoCiT Space",
                 "description": "<p>I will be discussing what JavaScript is, how to get started, and the best use cases for it. There are a number of libraries, frameworks, and service operations of JavaScript and for people who are new to it like myself it can be a bit confusing. Researching what JavaScript is and implementing what you learn by programming a website is the best way to master it. I will clarify the capabilities of the language and ways you can get started learning JavaScript in 2019.</p><p><a href=\"https://2019.jsconf.eu/dorian-holmes/learning-javascript-in-2019.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
+            },
+            "sponsor": {
+                "id": "talk-2019-06-02-11-30-3",
+                "datetime": "2019-06-02 11:30 GMT+0200",
+                "day": "2019-06-02",
+                "time": "11:30",
+                "who": "",
+                "what": "Mozilla WebThings Workshop",
+                "trackId": "sponsor",
+                "trackName": "Sponsor Booth",
+                "description": "<a href=\"https://2019.jsconf.eu/sponsors/mozilla-webthings-workshop.html\" target=\"_blank\" rel=\"noopener\">Details and registration</a>"
             }
         },
         "11:45": {
@@ -732,6 +776,17 @@
                 "trackId": "community",
                 "trackName": "Community Lounge",
                 "description": "Recharge with some inspiration during the break at the Community Lounge, where you&apos;ll hear several 5-minute stories of gratitude that highlight amazing people, their efforts, and the impact they&apos;ve had on our community members.<p></p><p><strong>Our session begins 5 minutes after the break starts</strong>, so you have some time to grab a quick refreshment or take a short pause after the previous session. <strong>We&apos;ll finish up halfway through the lunch break</strong> so you&apos;ll still have plenty of time to eat the delicious catered meal.</p>"
+            },
+            "livejs": {
+                "id": "talk-2019-06-02-13-15-3",
+                "datetime": "2019-06-02 13:15 GMT+0200",
+                "day": "2019-06-02",
+                "time": "13:15",
+                "who": "",
+                "what": "Meet & Greet / LiveJS Jaaam",
+                "trackId": "livejs",
+                "trackName": "live:js Stage",
+                "description": "Welcome to { Live : JS } A collective of audio and visual artists who build live experiences, shows and installations. Why JS? Because that&apos;s the main technology we use: JavaScript."
             }
         },
         "14:15": {
@@ -839,6 +894,17 @@
                 "trackId": "bipocit",
                 "trackName": "BIPoCiT Space",
                 "description": "<p>In this talk, I&#x2019;ll walk you through my journey as a woman of color in tech and how I got to where I am today as a software engineer at a high growth unicorn startup. &#x1F984;</p><p><a href=\"https://2019.jsconf.eu/frances-coronel/being-a-unicorn-working-for-another-unicorn.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
+            },
+            "livejs": {
+                "id": "talk-2019-06-02-15-45-4",
+                "datetime": "2019-06-02 15:45 GMT+0200",
+                "day": "2019-06-02",
+                "time": "15:45",
+                "who": "",
+                "what": "Performance / NERDDISCO & DESTROY WITH SCIENCE",
+                "trackId": "livejs",
+                "trackName": "live:js Stage",
+                "description": "Welcome to { Live : JS } A collective of audio and visual artists who build live experiences, shows and installations. Why JS? Because that&apos;s the main technology we use: JavaScript."
             }
         },
         "16:15": {
