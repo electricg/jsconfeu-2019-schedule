@@ -659,6 +659,17 @@
                 "trackName": "",
                 "description": null
             },
+            "community": {
+                "id": "talk-2019-06-02-11-30-2",
+                "datetime": "2019-06-02 11:30 GMT+0200",
+                "day": "2019-06-02",
+                "time": "11:30",
+                "who": "",
+                "what": "OMG CLIMATE",
+                "trackId": "community",
+                "trackName": "Community Lounge",
+                "description": "OMG CLIMATE is series of free, open source, community run unconferences about tech and the climate crisis, run in London, Berlin and Bangalore. Co-organiser @mrchrisadams will share lessons learned so far running them, and what people in tech can do about climate change.<p></p><p><strong>Our session begins 5 minutes after the break starts</strong>, so you have some time to grab a quick refreshment or take a short pause after the previous session.</p>"
+            },
             "bipocit": {
                 "id": "talk-dorian-holmes-learning-javascript-in-2019",
                 "datetime": "2019-06-02 11:30 GMT+0200",
@@ -671,7 +682,7 @@
                 "description": "<p>I will be discussing what JavaScript is, how to get started, and the best use cases for it. There are a number of libraries, frameworks, and service operations of JavaScript and for people who are new to it like myself it can be a bit confusing. Researching what JavaScript is and implementing what you learn by programming a website is the best way to master it. I will clarify the capabilities of the language and ways you can get started learning JavaScript in 2019.</p><p><a href=\"https://2019.jsconf.eu/dorian-holmes/learning-javascript-in-2019.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
             },
             "sponsor": {
-                "id": "talk-2019-06-02-11-30-3",
+                "id": "talk-2019-06-02-11-30-4",
                 "datetime": "2019-06-02 11:30 GMT+0200",
                 "day": "2019-06-02",
                 "time": "11:30",

@@ -23,7 +23,7 @@ const json = async () => {
 
 const build = () => {
     // update package version
-    const output = exec('npm run patch').toString();
+    const output = exec('npm run patch').toString().trim();
     const last = output.lastIndexOf('v');
     const ver = output.substring(last + 1);
     console.log(`bumped version to ${ver}`);
