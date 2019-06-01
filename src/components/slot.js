@@ -10,7 +10,7 @@ const Slot = ({ day, time, data }) => {
     return (
         <section
             id={`slot-${day}-${time}`}
-            dateTime={`${day} ${time} GMT+0200`}
+            dateTime={`${day}T${time}+02:00`}
             className="slot"
         >
             {trackIds.map(trackId => (
