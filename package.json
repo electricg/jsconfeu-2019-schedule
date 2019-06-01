@@ -1,6 +1,6 @@
 {
   "name": "jsconfeu-2019-schedule",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "JSConf EU 2019 schedule",
   "main": "index.js",
   "private": true,
@@ -16,7 +16,7 @@
       "2019-05-18",
       "2019-06-02"
     ],
-    "offlineMode": true
+    "offlineMode": false
   },
   "scripts": {
     "dev": "node server-dev.js",

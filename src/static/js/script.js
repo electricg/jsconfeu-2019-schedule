@@ -67,6 +67,7 @@
         setSelected(selected);
 
         inputs.forEach(el => {
+            el.addEventListener('input', onRadioChange);
             el.addEventListener('click', onRadioChange);
         });
     };
@@ -76,7 +77,8 @@
      */
     const onRadioChange = e => {
         const input = e.currentTarget;
-        e.preventDefault();
+        const {checked} = input;
+        // console.log(e.type, checked);
         setTimeout(() => {
             input.checked = !input.checked;
             const selected = getSelected();

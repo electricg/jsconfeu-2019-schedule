@@ -373,15 +373,15 @@
         },
         "17:00": {
             "backtrack": {
-                "id": "talk-marco-rogers-how-to-be-a-great-engineer--a-manager-s-take",
+                "id": "talk-allison-mcmillan-bdd--baby-driven-development",
                 "datetime": "2019-06-01 17:00 GMT+0200",
                 "day": "2019-06-01",
                 "time": "17:00",
-                "who": "Marco Rogers",
-                "what": "How To Be a Great Engineer, A Manager's Take",
+                "who": "Allison McMillan",
+                "what": "BDD: Baby Driven Development",
                 "trackId": "backtrack",
                 "trackName": "Back Track",
-                "description": "<p>Our community has an important ongoing discourse about what it means to be a &#x201C;great engineer&#x201D;. We discuss a myriad of topics from technical mastery to productivity to mentoring. I&#x2019;ve been an engineer for along time and I have opinions about all of these. But does it matter what the boss thinks? I&#x2019;m also an engineering manager and I&#x2019;ve built several successful teams of engineers. I&#x2019;d like to offer an uncommonly candid view on what it means to be a successful engineer from the perspective of managers and leaders.</p><p><a href=\"https://2019.jsconf.eu/marco-rogers/how-to-be-a-great-engineer-a-managers-take.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
+                "description": "<p>When I became a parent, I was completely unprepared for the challenges that awaited me. I reached out to hundreds of fellow parents in tech and learned there are common challenges that simply aren&#x2019;t spoken about. These focus around one fact that no one wants to admit&#x2026; parenting is not fun. Parenting is stressful, difficult, and oftentimes incredibly lonely. But being a parent also makes people more organized, focused, and empathetic. We&#x2019;ll explore these survey results to expose common trends and issues and discuss solutions that show how supporting parents helps all team members thrive.</p><p><a href=\"https://2019.jsconf.eu/allison-mcmillan/bdd-baby-driven-development.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
             },
             "sidetrack": {
                 "id": "talk-ziran-sun-buildin-an-end-to-end-iot-system-using-javascript-with--gdpr-awareness-",
@@ -508,28 +508,28 @@
         },
         "21:00": {
             "backtrack": {
-                "id": "talk-vitalii-bobrov-javascript--javascript---rocks-you-",
+                "id": "talk---live---js---making-of-this-stage",
                 "datetime": "2019-06-01 21:00 GMT+0200",
                 "day": "2019-06-01",
                 "time": "21:00",
+                "who": "{ live : js }",
+                "what": "Making of this Stage",
+                "trackId": "backtrack",
+                "trackName": "Back Track",
+                "description": "<p>Join us for a walk through of the JavaScript magic powering this stage.</p><p>{ live : js } collective of audio and visual artists who build live experiences, shows and installations. Why JS? Because that&#x2019;s the main technology we use: JavaScript.</p><p>We are:</p><ul><li><a href=\"https://twitter.com/Rumyra\" target=\"_blank\" rel=\"noopener\">ruth john</a></li><li><a href=\"https://twitter.com/TimPietrusky\" target=\"_blank\" rel=\"noopener\">tim pietrusky</a></li><li><a href=\"https://twitter.com/usefulthink\" target=\"_blank\" rel=\"noopener\">martin schuhfuss</a></li><li><a href=\"https://twitter.com/_2xAA\" target=\"_blank\" rel=\"noopener\">sam wray</a></li><li><a href=\"https://twitter.com/MattMckegg\" target=\"_blank\" rel=\"noopener\">matt mckegg</a></li><li><a href=\"https://twitter.com/halfbyte\" target=\"_blank\" rel=\"noopener\">jan krutisch</a></li></ul><p><a href=\"https://2019.jsconf.eu/live-js/making-of-this-stage.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
+            }
+        },
+        "21:40": {
+            "backtrack": {
+                "id": "talk-vitalii-bobrov-javascript--javascript---rocks-you-",
+                "datetime": "2019-06-01 21:40 GMT+0200",
+                "day": "2019-06-01",
+                "time": "21:40",
                 "who": "Vitalii Bobrov",
                 "what": "JavaScript, JavaScript…. Rocks You!",
                 "trackId": "backtrack",
                 "trackName": "Back Track",
                 "description": "<p>After so many years sitting with the computer you can take your old scratched Les Paul or Stratocaster from the case and fill all the space around with warm riffs. I&#x2019;m going to show how to transform the code into Kirk Hammett&#x2019;s wah-wah, Stevie Ray Vaughan&#x2019;s overdrive and Kurt Cobain&#x2019;s distortion. You&#x2019;ll learn how to parse audio input in real-time using JavaScript and the Web Audio API.</p><p>I&#x2019;ll be jamming live on stage with my guitar to demo every code example and we&#x2019;ll also use WebRTC to jam with friends across the world! After this talk, you will be familiar with the principles behind pedal sound effects and how to create them in code. Let&#x2019;s rock the Web!</p><p><a href=\"https://2019.jsconf.eu/vitalii-bobrov/javascript-javascript-rocks-you.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
-            }
-        },
-        "21:40": {
-            "backtrack": {
-                "id": "talk-max-bittker-simulating-sand--building-interactivity-with-webassembly",
-                "datetime": "2019-06-01 21:40 GMT+0200",
-                "day": "2019-06-01",
-                "time": "21:40",
-                "who": "max bittker",
-                "what": "Simulating Sand: Building Interactivity With WebAssembly",
-                "trackId": "backtrack",
-                "trackName": "Back Track",
-                "description": "<p>&#x201C;Falling sand games&#x201D; were a beloved childhood curiosity, but when I set out to write my own in Javascript, performance got in the way of the scale and granularity I wanted.</p><p>Could WebAssembly be the tool to build the sand simulation of my dreams, or is it still just for blog posts?</p><p>I&#x2019;ll share with you the history and beauty of falling sand games, what I learned building mine to leverage the power of modern browsers, and show you how WebAssembly can cooperate productively with the JS ecosystem to enable awesome web experiences.</p><p><a href=\"https://2019.jsconf.eu/max-bittker/simulating-sand-building-interactivity-with-webassembly.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
             }
         },
         "22:20": {
@@ -543,19 +543,6 @@
                 "trackId": "backtrack",
                 "trackName": "Back Track",
                 "description": "<p>Most people connected to the Web are carrying JavaScript in their pocket without even knowing it, and those of us making tools for building with it are either unaware of or blissfully ignoring that population. While JavaScript&#x2019;s pervasiveness grows, so is the gap in its literacy, and this is a gap we need to solve if we&#x2019;re ever going to survive self-driving cars on the blockchain. Let&#x2019;s talk about JavaScript, the tool, as opposed to JavaScript, the Oracle-run Twitter account.</p><p><a href=\"https://2019.jsconf.eu/jenn-schiffer/javascript-considereduseful.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
-            }
-        },
-        "23:00": {
-            "backtrack": {
-                "id": "talk---live---js---making-of-this-stage",
-                "datetime": "2019-06-01 23:00 GMT+0200",
-                "day": "2019-06-01",
-                "time": "23:00",
-                "who": "{ live : js }",
-                "what": "Making of this Stage",
-                "trackId": "backtrack",
-                "trackName": "Back Track",
-                "description": "<p>Join us for a walk through of the JavaScript magic powering this stage.</p><p>{ live : js } collective of audio and visual artists who build live experiences, shows and installations. Why JS? Because that&#x2019;s the main technology we use: JavaScript.</p><p>We are:</p><ul><li><a href=\"https://twitter.com/Rumyra\" target=\"_blank\" rel=\"noopener\">ruth john</a></li><li><a href=\"https://twitter.com/TimPietrusky\" target=\"_blank\" rel=\"noopener\">tim pietrusky</a></li><li><a href=\"https://twitter.com/usefulthink\" target=\"_blank\" rel=\"noopener\">martin schuhfuss</a></li><li><a href=\"https://twitter.com/_2xAA\" target=\"_blank\" rel=\"noopener\">sam wray</a></li><li><a href=\"https://twitter.com/MattMckegg\" target=\"_blank\" rel=\"noopener\">matt mckegg</a></li><li><a href=\"https://twitter.com/halfbyte\" target=\"_blank\" rel=\"noopener\">jan krutisch</a></li></ul><p><a href=\"https://2019.jsconf.eu/live-js/making-of-this-stage.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
             }
         }
     },
@@ -850,15 +837,15 @@
         },
         "15:15": {
             "backtrack": {
-                "id": "talk-allison-mcmillan-bdd--baby-driven-development",
+                "id": "talk-2019-06-02-15-15-1",
                 "datetime": "2019-06-02 15:15 GMT+0200",
                 "day": "2019-06-02",
                 "time": "15:15",
-                "who": "Allison McMillan",
-                "what": "BDD: Baby Driven Development",
+                "who": "Max Bittker",
+                "what": "Simulating Sand: Building Interactivity With WebAssembly",
                 "trackId": "backtrack",
                 "trackName": "Back Track",
-                "description": "<p>When I became a parent, I was completely unprepared for the challenges that awaited me. I reached out to hundreds of fellow parents in tech and learned there are common challenges that simply aren&#x2019;t spoken about. These focus around one fact that no one wants to admit&#x2026; parenting is not fun. Parenting is stressful, difficult, and oftentimes incredibly lonely. But being a parent also makes people more organized, focused, and empathetic. We&#x2019;ll explore these survey results to expose common trends and issues and discuss solutions that show how supporting parents helps all team members thrive.</p><p><a href=\"https://2019.jsconf.eu/allison-mcmillan/bdd-baby-driven-development.html\" target=\"_blank\" rel=\"noopener\">More info</a></p>"
+                "description": null
             },
             "sidetrack": {
                 "id": "talk-joe-sepi-promises-api-in-node-js-core--where-we-are-and-where-we-ll-get-to",
