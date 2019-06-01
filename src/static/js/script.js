@@ -77,8 +77,6 @@
      */
     const onRadioChange = e => {
         const input = e.currentTarget;
-        const {checked} = input;
-        // console.log(e.type, checked);
         setTimeout(() => {
             input.checked = !input.checked;
             const selected = getSelected();
