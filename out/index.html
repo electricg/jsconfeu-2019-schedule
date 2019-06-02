@@ -275,7 +275,7 @@ header a.active {
 
 <body>
     <h1 class="conf-title">JSConf EU 2019</h1>
-    <h2 class="conf-date">June 1st &amp; 2nd</h2><span class="version">v1.1.8<span class="airplane" id="airplane"></span></span>
+    <h2 class="conf-date">June 1st &amp; 2nd</h2><span class="version">v1.1.9<span class="airplane" id="airplane"></span></span>
     <div>
         <main><input type="button" value="now" id="now" class="now" />
             <section id="day-2019-06-01" class="day">
@@ -990,7 +990,7 @@ window['🦄'] = {
     repo: 'https://github.com/electricg/jsconfeu-2019-schedule',
     namespace: 'jsconfeu19',
     days: [`2019-05-18`,`2019-06-02`],
-    offlineMode: false,
+    offlineMode: true,
 };
 </script>
     <script>//=== Save fav sessions
@@ -1072,8 +1072,6 @@ window['🦄'] = {
      */
     const onRadioChange = e => {
         const input = e.currentTarget;
-        const {checked} = input;
-        // console.log(e.type, checked);
         setTimeout(() => {
             input.checked = !input.checked;
             const selected = getSelected();
